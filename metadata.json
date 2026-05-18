@@ -1,0 +1,6 @@
+{
+  "name": "Desi Nomad — AI Chatbots for Travel Companies",
+  "description": "Premium AI chatbots specifically designed for travel businesses to capture leads, answer FAQs, and resolve complaints 24/7.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

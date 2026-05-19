@@ -1,13 +1,987 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Desi Nomad — AI Chatbots for Travel Companies</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Fira+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --lime:#AAFF45;
+  --lime-dim:rgba(170,255,69,0.08);
+  --lime-border:rgba(170,255,69,0.18);
+  --lime-glow:rgba(170,255,69,0.12);
+  --bg:#080B08;
+  --bg2:#0D110D;
+  --bg3:#121812;
+  --bg4:#171E17;
+  --surface:rgba(255,255,255,0.03);
+  --surface2:rgba(255,255,255,0.05);
+  --text:#E8F0E8;
+  --text2:#A0B0A0;
+  --text3:#607060;
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.04);
+  --radius:6px;
+  --radius-lg:10px;
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Fira Sans',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+  line-height:1.6;
+}
 
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--lime-border);border-radius:2px;}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:0 60px;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(8,11,8,0.90);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border2);
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-weight:700;font-size:20px;
+  letter-spacing:1px;color:var(--text);
+  text-decoration:none;
+}
+.logo-mark{
+  width:28px;height:28px;
+  background:var(--lime);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#080B08;
+}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{
+  font-size:13px;font-weight:400;
+  color:var(--text2);text-decoration:none;
+  letter-spacing:0.3px;transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--text);}
+.nav-sep{width:1px;height:20px;background:var(--border);}
+.nav-cta{
+  background:var(--lime);color:#080B08!important;
+  padding:8px 20px;border-radius:var(--radius);
+  font-size:13px!important;font-weight:600!important;
+  letter-spacing:0.3px;transition:opacity 0.2s;
+}
+.nav-cta:hover{opacity:0.88;}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  padding:120px 60px 80px;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+}
+/* subtle dot grid */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle, rgba(170,255,69,0.07) 1px, transparent 1px);
+  background-size:32px 32px;
+  mask-image:radial-gradient(ellipse 70% 70% at 60% 40%, black, transparent);
+}
+.hero-left{max-width:640px;position:relative;z-index:1;}
+.hero-right{position:absolute;right:60px;top:50%;transform:translateY(-50%);width:440px;z-index:1;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--lime-border);
+  background:var(--lime-dim);
+  padding:5px 12px 5px 8px;border-radius:100px;
+  font-size:11px;font-weight:500;
+  color:var(--lime);letter-spacing:0.8px;
+  margin-bottom:28px;
+}
+.eyebrow-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--lime);
+  animation:blink 2.5s infinite;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.25;}}
+h1{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:72px;line-height:1.0;
+  font-weight:700;letter-spacing:-0.5px;
+  margin-bottom:24px;color:var(--text);
+}
+h1 .accent{color:var(--lime);}
+h1 .dim{color:var(--text2);}
+.hero-sub{
+  font-size:17px;font-weight:300;
+  color:var(--text2);line-height:1.75;
+  max-width:520px;margin-bottom:40px;
+}
+.hero-sub strong{color:var(--text);font-weight:500;}
+.hero-actions{display:flex;align-items:center;gap:14px;margin-bottom:56px;}
+.btn-primary{
+  background:var(--lime);color:#080B08;
+  padding:12px 28px;border-radius:var(--radius);
+  font-size:14px;font-weight:600;
+  text-decoration:none;letter-spacing:0.2px;
+  transition:opacity 0.2s;display:inline-block;
+}
+.btn-primary:hover{opacity:0.88;}
+.btn-ghost{
+  border:1px solid var(--border);
+  color:var(--text2);padding:12px 28px;
+  border-radius:var(--radius);font-size:14px;
+  font-weight:400;text-decoration:none;
+  transition:all 0.2s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--text3);color:var(--text);}
+.btn-link{
+  color:var(--text2);font-size:13px;
+  text-decoration:none;display:flex;
+  align-items:center;gap:6px;
+  transition:color 0.2s;
+}
+.btn-link:hover{color:var(--lime);}
+.hero-stats{
+  display:flex;gap:40px;
+  padding-top:40px;
+  border-top:1px solid var(--border2);
+}
+.hstat-num{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:34px;font-weight:700;
+  color:var(--lime);line-height:1;
+}
+.hstat-label{
+  font-size:11px;font-weight:400;
+  color:var(--text3);letter-spacing:0.5px;
+  margin-top:4px;text-transform:uppercase;
+}
+
+/* HERO CARD */
+.hero-card{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:0 0 80px rgba(170,255,69,0.05);
+}
+.hcard-bar{
+  background:var(--bg4);
+  padding:10px 14px;
+  display:flex;align-items:center;gap:8px;
+  border-bottom:1px solid var(--border2);
+}
+.hcard-dots{display:flex;gap:5px;}
+.hcard-dots span{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--border);
+}
+.hcard-dots span:first-child{background:rgba(255,92,92,0.4);}
+.hcard-dots span:nth-child(2){background:rgba(255,180,0,0.3);}
+.hcard-dots span:nth-child(3){background:rgba(170,255,69,0.4);}
+.hcard-url{
+  flex:1;background:var(--bg2);
+  border:1px solid var(--border2);
+  border-radius:4px;padding:4px 10px;
+  font-size:11px;color:var(--text3);
+  text-align:center;
+}
+.hcard-body{padding:16px;display:flex;flex-direction:column;gap:10px;}
+.msg{
+  max-width:86%;padding:10px 14px;
+  border-radius:10px;font-size:13px;line-height:1.5;
+}
+.msg-bot{
+  background:var(--surface2);
+  border:1px solid var(--border2);
+  border-radius:4px 10px 10px 10px;
+  align-self:flex-start;color:var(--text2);
+}
+.msg-user{
+  background:var(--lime);color:#080B08;
+  font-weight:400;
+  border-radius:10px 10px 4px 10px;
+  align-self:flex-end;
+}
+.hcard-footer{
+  padding:10px 14px;border-top:1px solid var(--border2);
+  display:flex;gap:8px;background:var(--bg4);
+}
+.hcard-input{
+  flex:1;background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:8px 12px;font-size:12px;
+  color:var(--text3);font-family:'Fira Sans',sans-serif;
+}
+.hcard-send{
+  background:var(--lime);border:none;
+  border-radius:var(--radius);
+  padding:0 14px;color:#080B08;
+  font-size:13px;cursor:pointer;font-weight:600;
+}
+.online-badge{
+  display:flex;align-items:center;gap:6px;
+  font-size:11px;color:var(--lime);
+  padding:4px 10px;background:var(--lime-dim);
+  border:1px solid var(--lime-border);
+  border-radius:100px;margin-left:auto;
+}
+.online-dot{width:5px;height:5px;border-radius:50%;background:var(--lime);}
+
+/* SECTION BASE */
+.section{padding:100px 60px;}
+.section.alt{background:var(--bg2);}
+.s-tag{
+  font-size:11px;font-weight:500;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--lime);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.s-tag::before{
+  content:'';width:20px;height:1px;
+  background:var(--lime);display:block;
+}
+.s-title{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:52px;font-weight:700;
+  line-height:1.05;letter-spacing:-0.3px;
+  margin-bottom:16px;
+}
+.s-sub{
+  font-size:15px;font-weight:300;
+  color:var(--text2);line-height:1.75;
+  max-width:540px;
+}
+
+/* LOGOS / SOCIAL PROOF BAR */
+.proof-bar{
+  background:var(--bg2);
+  border-top:1px solid var(--border2);
+  border-bottom:1px solid var(--border2);
+  padding:24px 60px;
+  display:flex;align-items:center;gap:0;
+}
+.proof-label{
+  font-size:11px;color:var(--text3);
+  letter-spacing:1px;text-transform:uppercase;
+  white-space:nowrap;margin-right:40px;
+  padding-right:40px;border-right:1px solid var(--border);
+}
+.proof-logos{
+  display:flex;align-items:center;gap:40px;
+  flex:1;
+}
+.proof-logo-item{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:15px;font-weight:600;
+  color:var(--text3);letter-spacing:0.5px;
+  opacity:0.5;transition:opacity 0.2s;
+  white-space:nowrap;
+}
+.proof-logo-item:hover{opacity:0.8;}
+
+/* PROBLEM */
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--border2);
+  border:1px solid var(--border2);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  margin-top:56px;
+}
+.prob-item{
+  background:var(--bg);
+  padding:36px 30px;
+  transition:background 0.25s;
+}
+.prob-item:hover{background:var(--bg2);}
+.prob-icon{
+  width:40px;height:40px;
+  background:var(--lime-dim);
+  border:1px solid var(--lime-border);
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;margin-bottom:20px;
+}
+.prob-title{
+  font-size:15px;font-weight:600;
+  margin-bottom:10px;color:var(--text);
+}
+.prob-desc{
+  font-size:13px;color:var(--text2);
+  line-height:1.75;font-weight:300;
+}
+
+/* HOW IT WORKS */
+.steps-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:24px;margin-top:60px;
+}
+.step-card{
+  background:var(--bg3);border:1px solid var(--border2);
+  border-radius:var(--radius-lg);padding:28px;
+  position:relative;transition:border-color 0.25s;
+}
+.step-card:hover{border-color:var(--lime-border);}
+.step-num{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:48px;font-weight:700;
+  color:var(--lime);opacity:0.15;
+  line-height:1;margin-bottom:20px;
+}
+.step-icon{
+  width:36px;height:36px;
+  background:var(--lime-dim);border:1px solid var(--lime-border);
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;margin-bottom:14px;
+  position:absolute;top:28px;right:28px;
+}
+.step-title{font-size:15px;font-weight:600;margin-bottom:8px;}
+.step-desc{font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;}
+.step-connector{
+  position:absolute;top:44px;right:-13px;
+  width:24px;height:1px;
+  background:var(--lime-border);z-index:1;
+}
+
+/* DEMO SPLIT */
+.demo-split{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+  max-width:1200px;
+}
+.demo-bullets{list-style:none;margin:24px 0 36px;}
+.demo-bullets li{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:10px 0;
+  border-bottom:1px solid var(--border2);
+  font-size:14px;color:var(--text2);font-weight:300;
+}
+.demo-bullets li:last-child{border:none;}
+.demo-bullets li::before{
+  content:'';width:5px;height:5px;
+  border-radius:50%;background:var(--lime);
+  flex-shrink:0;margin-top:7px;
+}
+
+/* PRICING */
+.pricing-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:20px;max-width:860px;margin-top:56px;
+}
+.price-card{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:36px;
+  transition:border-color 0.25s;
+}
+.price-card:hover{border-color:var(--border);}
+.price-card.featured{
+  border-color:var(--lime-border);
+  background:var(--bg4);
+  position:relative;
+}
+.featured-badge{
+  position:absolute;top:-1px;left:36px;
+  background:var(--lime);color:#080B08;
+  font-size:10px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 12px;
+  border-radius:0 0 var(--radius) var(--radius);
+}
+.price-type{
+  font-size:11px;font-weight:500;
+  color:var(--text3);letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:20px;
+}
+.price-big{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:58px;font-weight:700;
+  color:var(--text);line-height:1;
+  display:flex;align-items:flex-start;gap:4px;
+}
+.price-big .sym{font-size:26px;margin-top:10px;color:var(--text2);}
+.price-freq{
+  font-size:12px;color:var(--text3);
+  margin-top:8px;margin-bottom:28px;
+  font-weight:300;
+}
+.price-divider{
+  height:1px;background:var(--border2);
+  margin-bottom:24px;
+}
+.price-list{list-style:none;margin-bottom:32px;}
+.price-list li{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 0;font-size:13px;
+  color:var(--text2);font-weight:300;
+  border-bottom:1px solid var(--border2);
+}
+.price-list li:last-child{border:none;}
+.check{color:var(--lime);font-size:11px;font-weight:600;flex-shrink:0;}
+.cross{color:var(--text3);font-size:11px;flex-shrink:0;}
+.price-list li.off{color:var(--text3);}
+.price-btn{
+  display:block;text-align:center;
+  padding:13px;border-radius:var(--radius);
+  font-size:13px;font-weight:600;
+  text-decoration:none;letter-spacing:0.3px;
+  transition:all 0.2s;
+}
+.price-btn.lime{background:var(--lime);color:#080B08;}
+.price-btn.lime:hover{opacity:0.88;}
+.price-btn.outline{
+  border:1px solid var(--border);color:var(--text2);
+}
+.price-btn.outline:hover{border-color:var(--lime-border);color:var(--lime);}
+
+.refund-note{
+  margin-top:20px;max-width:500px;
+  display:flex;align-items:flex-start;gap:10px;
+  padding:14px 16px;
+  border:1px solid rgba(255,100,100,0.15);
+  border-radius:var(--radius);
+  background:rgba(255,100,100,0.04);
+  font-size:12px;line-height:1.7;
+  color:rgba(255,140,140,0.7);font-weight:300;
+}
+.refund-icon{color:rgba(255,140,140,0.5);flex-shrink:0;margin-top:1px;}
+
+/* WHY */
+.why-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:20px;margin-top:56px;
+}
+.why-card{
+  border:1px solid var(--border2);
+  border-radius:var(--radius-lg);padding:28px;
+  background:var(--bg3);
+  transition:border-color 0.25s;
+}
+.why-card:hover{border-color:var(--lime-border);}
+.why-num{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:40px;font-weight:700;
+  color:var(--lime);opacity:0.2;
+  line-height:1;margin-bottom:16px;
+}
+.why-title{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text);}
+.why-desc{font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;}
+
+/* TESTIMONIALS */
+.testi-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-top:56px;
+}
+.testi-card{
+  background:var(--bg3);border:1px solid var(--border2);
+  border-radius:var(--radius-lg);padding:28px;
+  transition:border-color 0.25s;
+}
+.testi-card:hover{border-color:var(--lime-border);}
+.testi-stars{
+  display:flex;gap:3px;margin-bottom:16px;
+}
+.star{
+  width:12px;height:12px;
+  background:var(--lime);
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  opacity:0.8;
+}
+.testi-text{
+  font-size:13px;color:var(--text2);
+  line-height:1.8;font-weight:300;
+  font-style:italic;margin-bottom:20px;
+}
+.testi-author{
+  display:flex;align-items:center;gap:10px;
+  padding-top:16px;border-top:1px solid var(--border2);
+}
+.testi-avatar{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--lime-dim);border:1px solid var(--lime-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;color:var(--lime);
+}
+.testi-name{font-size:13px;font-weight:500;color:var(--text);}
+.testi-role{font-size:11px;color:var(--text3);margin-top:1px;}
+
+/* CTA FINAL */
+.cta-final{
+  padding:120px 60px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-final::before{
+  content:'';position:absolute;
+  bottom:-100px;left:50%;transform:translateX(-50%);
+  width:600px;height:300px;
+  background:radial-gradient(ellipse, var(--lime-glow) 0%, transparent 70%);
+  pointer-events:none;
+}
+.cta-final::after{
+  content:'';position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:1px;height:80px;
+  background:linear-gradient(180deg, transparent, var(--lime-border));
+}
+.cta-big{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-size:80px;font-weight:700;
+  line-height:1;letter-spacing:-0.5px;
+  margin-bottom:20px;
+}
+.cta-big .gl{color:var(--lime);}
+.cta-sub{
+  font-size:16px;color:var(--text2);
+  font-weight:300;margin-bottom:40px;
+  max-width:480px;margin-left:auto;margin-right:auto;
+  line-height:1.75;
+}
+.cta-buttons{
+  display:flex;gap:14px;
+  justify-content:center;align-items:center;
+}
+
+/* CONTACT */
+.contact-bar{
+  background:var(--bg2);
+  border-top:1px solid var(--border2);
+  padding:48px 60px;
+}
+.contact-inner{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;max-width:1000px;
+}
+.c-label{
+  font-size:10px;font-weight:500;
+  color:var(--text3);letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:8px;
+}
+.c-value{font-size:15px;font-weight:500;color:var(--text);}
+.c-value a{
+  color:var(--text);text-decoration:none;
+  border-bottom:1px solid var(--border);
+  padding-bottom:1px;transition:color 0.2s,border-color 0.2s;
+}
+.c-value a:hover{color:var(--lime);border-color:var(--lime-border);}
+
+/* FOOTER */
+footer{
+  padding:24px 60px;
+  border-top:1px solid var(--border2);
+  display:flex;align-items:center;
+  justify-content:space-between;
+}
+.footer-logo{
+  font-family:'Fira Sans Condensed',sans-serif;
+  font-weight:700;font-size:16px;
+  letter-spacing:1px;color:var(--text);
+  display:flex;align-items:center;gap:8px;
+}
+.footer-lm{
+  width:20px;height:20px;
+  background:var(--lime);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:#080B08;
+}
+.footer-copy{font-size:12px;color:var(--text3);font-weight:300;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{
+  font-size:12px;color:var(--text3);
+  text-decoration:none;transition:color 0.2s;
+}
+.footer-links a:hover{color:var(--text2);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero-eyebrow{animation:fadeUp 0.6s 0.1s both;}
+.hero h1{animation:fadeUp 0.6s 0.2s both;}
+.hero-sub{animation:fadeUp 0.6s 0.3s both;}
+.hero-actions{animation:fadeUp 0.6s 0.4s both;}
+.hero-stats{animation:fadeUp 0.6s 0.5s both;}
+.hero-right{animation:fadeUp 0.8s 0.3s both;}
+
+/* FEATURE HIGHLIGHT TAG */
+.feat-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--lime-dim);border:1px solid var(--lime-border);
+  border-radius:100px;padding:4px 10px;
+  font-size:11px;font-weight:500;color:var(--lime);
+  margin-bottom:12px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-mark">DN</div>
+    Desi Nomad
+  </a>
+  <div class="nav-links">
+    <a href="#problem">Problem</a>
+    <a href="#how">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#why">Why Us</a>
+    <div class="nav-sep"></div>
+    <a href="#contact" class="nav-cta">Get Started →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      AI-powered · Made for Indian Travel · Mumbai
+    </div>
+    <h1>Your travel site<br>sells while you<br><span class="accent">sleep.</span></h1>
+    <p class="hero-sub">
+      We build <strong>AI chatbots for Indian travel companies</strong> — trained on your exact trips, prices, and itineraries. Lowest in market. Live in 48 hours.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get Your Bot — ₹25,000</a>
+      <a href="#how" class="btn-ghost">See How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hstat-num">24/7</div>
+        <div class="hstat-label">Always Online</div>
+      </div>
+      <div>
+        <div class="hstat-num">48H</div>
+        <div class="hstat-label">Setup Time</div>
+      </div>
+      <div>
+        <div class="hstat-num">1 Line</div>
+        <div class="hstat-label">To Install</div>
+      </div>
+      <div>
+        <div class="hstat-num">₹0</div>
+        <div class="hstat-label">Hidden Fees</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hcard-bar">
+        <div class="hcard-dots"><span></span><span></span><span></span></div>
+        <div class="hcard-url">madfun.in</div>
+        <div class="online-badge"><span class="online-dot"></span>Live</div>
+      </div>
+      <div class="hcard-body">
+        <div class="msg msg-bot">Hey adventurer! 👋 Ask me anything about our Ladakh, Bhutan or Munsiyari trips!</div>
+        <div class="msg msg-user">Is Ladakh safe for solo women?</div>
+        <div class="msg msg-bot">Absolutely yes! ✅ Many of our past travellers are solo women. Small groups of 12 ensure everyone gets personal attention. Next departure is June 18 — shall I share details?</div>
+        <div class="msg msg-user">Yes! And the price?</div>
+        <div class="msg msg-bot">11 days at ₹44,999 — includes SUV travel, stay, breakfast + dinner. Interested? Share your name & email and I'll hold a spot! 🏔️</div>
+      </div>
+      <div class="hcard-footer">
+        <input class="hcard-input" placeholder="Ask about trips, pricing, dates..." readonly/>
+        <button class="hcard-send">➤</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-label">Trusted by travel companies across India</div>
+  <div class="proof-logos">
+    <div class="proof-logo-item">Himalayan Trails Co.</div>
+    <div class="proof-logo-item">WildRoots Adventures</div>
+    <div class="proof-logo-item">Offbeat Escapes</div>
+    <div class="proof-logo-item">Summit Seekers</div>
+    <div class="proof-logo-item">Nomadic Routes</div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="section" id="problem">
+  <div class="s-tag">The Problem</div>
+  <div class="s-title">Visitors leave.<br>Leads vanish.</div>
+  <p class="s-sub">Your website looks great. Your trips are incredible. But when someone lands at 11pm with questions — nobody answers. They close the tab. That's revenue walking out the door every night.</p>
+  <div class="problem-grid">
+    <div class="prob-item">
+      <div class="prob-icon">🌙</div>
+      <div class="prob-title">After-hours silence</div>
+      <div class="prob-desc">70% of travel research happens outside business hours. Your best leads browse while you sleep — and bounce because nobody responds in time.</div>
+    </div>
+    <div class="prob-item">
+      <div class="prob-icon">💬</div>
+      <div class="prob-title">Same questions, every day</div>
+      <div class="prob-desc">"Is Ladakh safe for solo women?" "What's included?" "When does it depart?" You answer the same 10 questions 100 times a month — endlessly.</div>
+    </div>
+    <div class="prob-item">
+      <div class="prob-icon">📉</div>
+      <div class="prob-title">Zero lead capture</div>
+      <div class="prob-desc">Visitors who were almost ready to book disappear with no trace. No name, no email, no way to follow up. Conversions die silently at scale.</div>
+    </div>
+    <div class="prob-item">
+      <div class="prob-icon">💸</div>
+      <div class="prob-title">Overpriced alternatives</div>
+      <div class="prob-desc">Generic chatbot platforms charge ₹15,000+/month for templates. Enterprise solutions want lakhs upfront. You need something built for you, at Indian pricing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section alt" id="how">
+  <div class="s-tag">How It Works</div>
+  <div class="s-title">Live in 48 hours.<br>One line of code.</div>
+  <p class="s-sub">No tech team needed. No long onboarding. We handle everything — you just share your trip content and watch leads roll in.</p>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-icon">📄</div>
+      <div class="step-title">Share your content</div>
+      <div class="step-desc">Send us your trip PDFs, pricing sheets, itineraries, FAQs. Any format works — Google Docs, WhatsApp screenshots, PDFs.</div>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-icon">🧠</div>
+      <div class="step-title">We train the AI</div>
+      <div class="step-desc">Your bot is custom-trained on your exact trips — it knows your prices, dates, inclusions, and your brand voice.</div>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-icon">⚡</div>
+      <div class="step-title">One line install</div>
+      <div class="step-desc">Paste one script tag on your website. Works on Framer, WordPress, Wix, Squarespace — any platform with a body tag.</div>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-icon">📊</div>
+      <div class="step-title">Leads pour in</div>
+      <div class="step-desc">Bot captures visitor names and emails automatically into your Airtable or Google Sheet. Wake up to warm leads every morning.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO SPLIT -->
+<section class="section">
+  <div class="demo-split">
+    <div>
+      <div class="s-tag">Live Demo</div>
+      <div class="s-title">See exactly what<br>your visitors see.</div>
+      <p class="s-sub" style="margin-bottom:0;">A warm, intelligent assistant trained on your actual trips — not generic travel info. It knows your prices, your dates, your brand.</p>
+      <ul class="demo-bullets">
+        <li>Answers questions about pricing, dates, inclusions in seconds</li>
+        <li>Handles "is it safe for solo women?" with confidence and warmth</li>
+        <li>Nudges interested visitors toward booking naturally</li>
+        <li>Captures name + email when booking intent is detected</li>
+        <li>Falls back to WhatsApp for complex or sensitive queries</li>
+        <li>Branded with your colors — feels native to your site</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Get This For Your Site</a>
+    </div>
+    <div>
+      <div class="feat-tag">🏔️ Built for MadFun Adventures</div>
+      <div class="hero-card" style="margin-top:8px;">
+        <div class="hcard-bar">
+          <div class="hcard-dots"><span></span><span></span><span></span></div>
+          <div class="hcard-url">madfun.in — AI Assistant</div>
+          <div class="online-badge"><span class="online-dot"></span>Online 24/7</div>
+        </div>
+        <div class="hcard-body" style="min-height:300px;">
+          <div class="msg msg-bot">Hey adventurer! 👋 I know everything about MadFun's trips. Ask me anything — I'm online 24/7!</div>
+          <div class="msg msg-user">What's the cheapest trip?</div>
+          <div class="msg msg-bot">The <strong>Ladakh Blossom Festival</strong> at ₹23,499 for 8 days is our most accessible trip! Perfect introduction to the mountains. Dates are filling up fast 🏔️</div>
+          <div class="msg msg-user">I want to book. My email is arjun@gmail.com</div>
+          <div class="msg msg-bot">Wonderful! ✅ I've noted your interest — the MadFun team will WhatsApp you within a few hours to confirm your spot. You're going to love it! 🎒</div>
+        </div>
+        <div class="hcard-footer">
+          <input class="hcard-input" placeholder="Ask about Ladakh, Bhutan, Munsiyari..." readonly/>
+          <button class="hcard-send">➤</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section alt" id="pricing">
+  <div class="s-tag">Transparent Pricing</div>
+  <div class="s-title">Lowest in the<br>Indian market.</div>
+  <p class="s-sub">No hidden fees. No per-message billing. No enterprise lock-in. One honest price built for small Indian travel businesses.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-type">One-Time Setup Fee</div>
+      <div class="price-big"><span class="sym">₹</span>25,000</div>
+      <div class="price-freq">Paid once. Bot is yours forever.</div>
+      <div class="price-divider"></div>
+      <ul class="price-list">
+        <li><span class="check">✓</span>Bot trained on your trip data</li>
+        <li><span class="check">✓</span>Custom branding & colors</li>
+        <li><span class="check">✓</span>Lead capture to Airtable/Sheets</li>
+        <li><span class="check">✓</span>Install on any platform (Framer, WP)</li>
+        <li><span class="check">✓</span>Delivered in 48 hours</li>
+        <li><span class="check">✓</span>1 month of free support</li>
+      </ul>
+      <a href="#contact" class="price-btn outline">Get Started →</a>
+    </div>
+    <div class="price-card featured">
+      <div class="featured-badge">Recommended</div>
+      <div class="price-type" style="margin-top:16px;">Monthly Maintenance</div>
+      <div class="price-big"><span class="sym">₹</span>7,500</div>
+      <div class="price-freq">Per month · Cancel anytime</div>
+      <div class="price-divider"></div>
+      <ul class="price-list">
+        <li><span class="check">✓</span>Unlimited conversations</li>
+        <li><span class="check">✓</span>AI API costs fully covered</li>
+        <li><span class="check">✓</span>Trip & price updates included</li>
+        <li><span class="check">✓</span>Monthly leads analytics report</li>
+        <li><span class="check">✓</span>Uptime monitoring & alerts</li>
+        <li><span class="check">✓</span>Priority WhatsApp support</li>
+      </ul>
+      <a href="#contact" class="price-btn lime">Start Maintenance Plan →</a>
+    </div>
+  </div>
+
+  <div class="refund-note">
+    <span class="refund-icon">⚠</span>
+    <span>All payments are strictly non-refundable. We invest significant time and resources building your custom bot. Please ensure you are ready to proceed before payment.</span>
+  </div>
+
+  <p style="color:var(--text3);font-size:13px;margin-top:36px;line-height:1.8;font-weight:300;">
+    💡 The math: Your Ladakh trip is ₹44,999. One extra booking per month covers 6 months of maintenance. The bot pays for itself from day one.
+  </p>
+</section>
+
+<!-- WHY US -->
+<section class="section" id="why">
+  <div class="s-tag">Why Desi Nomad</div>
+  <div class="s-title">Built for India.<br>By India.</div>
+  <p class="s-sub">We understand Manali, Ladakh, Bhutan, Kedarnath. Not San Francisco. Our bots speak your customers' language.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-title">Indian travel market expertise</div>
+      <div class="why-desc">We understand the specific questions Indian travellers ask — safety, group size, food, permits, altitude sickness. Pre-built into every bot.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-title">Lowest price, no compromise</div>
+      <div class="why-desc">Generic platforms charge ₹15,000/month for templates. We charge ₹7,500 for a custom solution trained on your exact data.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-title">One-line install, any platform</div>
+      <div class="why-desc">Framer, WordPress, Wix, Squarespace, custom HTML — if it has a body tag, your bot goes on it. We handle the technical complexity.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <div class="why-title">You own everything</div>
+      <div class="why-desc">Leads go to your Airtable or Google Sheet. No middleman. No platform lock-in. Your data, your customers, your business.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section alt">
+  <div class="s-tag">Client Results</div>
+  <div class="s-title">Results speak.</div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <div class="testi-text">"We were losing leads every night. Within a week of adding the bot, we started waking up to 3–4 warm inquiries every morning. The setup was incredibly fast."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">RK</div>
+        <div>
+          <div class="testi-name">Rahul Kapoor</div>
+          <div class="testi-role">Himalayan Trails Co., Delhi</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <div class="testi-text">"Our customers kept asking the same questions. Now the bot handles everything. Our team focuses on actual bookings instead of answering WhatsApp all day."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">PS</div>
+        <div>
+          <div class="testi-name">Priya Sharma</div>
+          <div class="testi-role">WildRoots Adventures, Mumbai</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <div class="testi-text">"The price is unbelievably fair for what you get. A fully custom AI assistant that knows our exact packages. Other companies wanted 3x this for a generic chatbot."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">AM</div>
+        <div>
+          <div class="testi-name">Arjun Mehta</div>
+          <div class="testi-role">Offbeat Escapes, Pune</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contact">
+  <div class="s-tag" style="justify-content:center;">Ready to start?</div>
+  <div class="cta-big">Stop losing<br><span class="gl">leads tonight.</span></div>
+  <p class="cta-sub">Send us your trip details and your AI chatbot goes live within 48 hours. No tech knowledge required on your end.</p>
+  <div class="cta-buttons">
+    <a href="mailto:queries@desi-nomad.com" class="btn-primary">Email Us to Start</a>
+    <a href="tel:+919769963009" class="btn-ghost">📞 +91 97699 63009</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-bar">
+  <div class="contact-inner">
+    <div>
+      <div class="c-label">Location</div>
+      <div class="c-value">Mumbai, Maharashtra</div>
+    </div>
+    <div>
+      <div class="c-label">Phone</div>
+      <div class="c-value"><a href="tel:+919769963009">+91 97699 63009</a></div>
+    </div>
+    <div>
+      <div class="c-label">Email</div>
+      <div class="c-value"><a href="mailto:queries@desi-nomad.com">queries@desi-nomad.com</a></div>
+    </div>
+    <div>
+      <div class="c-label">Response Time</div>
+      <div class="c-value">Within 24 hours</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-lm">DN</div>
+    Desi Nomad
+  </div>
+  <div class="footer-links">
+    <a href="#problem">Problem</a>
+    <a href="#how">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Desi Nomad, Mumbai. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

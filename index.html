@@ -105,7 +105,8 @@ nav{
 .badge-icon{font-size:12px;}
 .hero h1{
   font-family:'Fira Sans',sans-serif;
-  font-size:clamp(32px, 4vw, 52px);
+  font-size:clamp(28px, 3.2vw, 42px);
+  font-weight:600;
   font-weight:700;line-height:1.1;
   letter-spacing:-1px;
   max-width:900px;
@@ -207,8 +208,8 @@ nav{
 .s-tag::before{content:'';width:20px;height:1px;background:var(--gold);display:block;}
 .s-title{
   font-family:'Fira Sans Condensed',sans-serif;
-  font-size:52px;font-weight:700;
-  line-height:1.05;letter-spacing:-0.3px;margin-bottom:16px;
+  font-size:36px;font-weight:700;
+  line-height:1.1;letter-spacing:-0.2px;margin-bottom:16px;
 }
 .s-sub{font-size:15px;font-weight:300;color:var(--text2);line-height:1.75;max-width:540px;}
 
@@ -331,10 +332,10 @@ nav{
 }
 .price-big{
   font-family:'Fira Sans Condensed',sans-serif;
-  font-size:58px;font-weight:700;color:var(--gold);
+  font-size:38px;font-weight:700;color:var(--text);
   line-height:1;display:flex;align-items:flex-start;gap:4px;
 }
-.price-big .sym{font-size:26px;margin-top:10px;color:var(--text3);}
+.price-big .sym{font-size:18px;margin-top:6px;color:var(--text3);}
 .price-freq{font-size:12px;color:var(--text3);margin-top:8px;margin-bottom:28px;font-weight:300;}
 .price-divider{height:1px;background:var(--border2);margin-bottom:24px;}
 .price-list{list-style:none;margin-bottom:32px;}
@@ -448,8 +449,8 @@ nav{
 }
 .cta-big{
   font-family:'Fira Sans Condensed',sans-serif;
-  font-size:80px;font-weight:700;line-height:1;
-  letter-spacing:-0.5px;margin-bottom:20px;
+  font-size:52px;font-weight:700;line-height:1.05;
+  letter-spacing:-0.3px;margin-bottom:20px;
 }
 .cta-big .gl{color:var(--gold);}
 .cta-sub{
@@ -802,46 +803,80 @@ footer{
   <div class="s-tag">Transparent Pricing</div>
   <div class="s-title">Lowest in the<br>Indian market.</div>
   <p class="s-sub">No hidden fees. No per-message billing. No enterprise lock-in. One honest price built for small Indian travel businesses.</p>
+  <!-- Value reframe banner -->
+  <div style="margin-top:48px;margin-bottom:32px;padding:20px 28px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:var(--radius-lg);max-width:860px;display:flex;align-items:center;gap:16px;">
+    <span style="font-size:24px;">💡</span>
+    <div>
+      <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;">One booking pays for everything.</div>
+      <div style="font-size:13px;color:var(--text2);font-weight:300;line-height:1.6;">Your average trip costs ₹25,000–45,000. One extra booking from the bot covers months of maintenance. Most clients see ROI in week one.</div>
+    </div>
+  </div>
+
   <div class="pricing-grid">
     <div class="price-card">
-      <div class="price-type">One-Time Setup Fee</div>
-      <div class="price-big"><span class="sym">₹</span>15,000</div>
-      <div class="price-freq">Paid once. Bot is yours forever.</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+        <div class="price-type" style="margin-bottom:0;">One-Time Setup</div>
+        <div style="font-size:10px;color:var(--gold);background:var(--gold-dim);border:1px solid var(--gold-border);padding:3px 8px;border-radius:100px;letter-spacing:1px;">ONE TIME ONLY</div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+        <div class="price-big"><span class="sym">₹</span>15,000</div>
+        <div style="font-size:12px;color:var(--text3);font-weight:300;">setup</div>
+      </div>
+      <div style="font-size:11px;color:var(--gold);margin-bottom:4px;font-weight:400;">≈ ₹500/day for 30 days → then free forever</div>
+      <div class="price-freq">Pay once. Bot is yours. No recurring lock-in.</div>
       <div class="price-divider"></div>
       <ul class="price-list">
-        <li><span class="check">✓</span>Bot trained on your trip data</li>
+        <li><span class="check">✓</span>Bot trained on your exact trip data</li>
         <li><span class="check">✓</span>Custom branding & colors</li>
         <li><span class="check">✓</span>Lead capture to Airtable/Sheets</li>
         <li><span class="check">✓</span>Install on any platform</li>
         <li><span class="check">✓</span>Delivered in 7 days</li>
-        <li><span class="check">✓</span>1 month free support</li>
+        <li><span class="check">✓</span>1 month free support included</li>
       </ul>
       <a href="#contact" class="price-btn outline">Get Started →</a>
     </div>
+
     <div class="price-card featured">
-      <div class="featured-badge">Recommended</div>
-      <div class="price-type" style="margin-top:16px;">Monthly Maintenance</div>
-      <div class="price-big"><span class="sym">₹</span>6,500</div>
-      <div class="price-freq">Per month · Cancel anytime</div>
+      <div class="featured-badge">Most Popular</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;margin-top:16px;">
+        <div class="price-type" style="margin-bottom:0;">Monthly Maintenance</div>
+        <div style="font-size:10px;color:var(--gold);background:var(--gold-dim);border:1px solid var(--gold-border);padding:3px 8px;border-radius:100px;letter-spacing:1px;">CANCEL ANYTIME</div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+        <div class="price-big"><span class="sym">₹</span>6,500</div>
+        <div style="font-size:12px;color:var(--text3);font-weight:300;">/month</div>
+      </div>
+      <div style="font-size:11px;color:var(--gold);margin-bottom:4px;font-weight:400;">≈ ₹215/day · Less than a chai for your team ☕</div>
+      <div class="price-freq">Everything covered. No surprise bills. Ever.</div>
       <div class="price-divider"></div>
       <ul class="price-list">
         <li><span class="check">✓</span>Unlimited conversations</li>
         <li><span class="check">✓</span>AI API costs fully covered</li>
-        <li><span class="check">✓</span>Trip & price updates included</li>
+        <li><span class="check">✓</span>Trip & price updates anytime</li>
         <li><span class="check">✓</span>Monthly leads analytics report</li>
         <li><span class="check">✓</span>Uptime monitoring & alerts</li>
         <li><span class="check">✓</span>Priority WhatsApp support</li>
       </ul>
-      <a href="#contact" class="price-btn gold">Start Maintenance Plan →</a>
+      <a href="#contact" class="price-btn gold">Start for ₹215/day →</a>
     </div>
   </div>
-  <div class="refund-note">
+
+  <!-- Comparison callout -->
+  <div style="margin-top:24px;max-width:860px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    <div style="padding:14px 18px;background:rgba(255,100,100,0.04);border:1px solid rgba(255,100,100,0.12);border-radius:var(--radius);display:flex;align-items:center;gap:10px;">
+      <span style="font-size:16px;">❌</span>
+      <div style="font-size:12px;color:rgba(255,140,140,0.6);font-weight:300;line-height:1.6;">Generic chatbot platforms charge <strong style="color:rgba(255,140,140,0.8);">₹15,000+/month</strong> for templates that don't know your trips</div>
+    </div>
+    <div style="padding:14px 18px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:var(--radius);display:flex;align-items:center;gap:10px;">
+      <span style="font-size:16px;">✅</span>
+      <div style="font-size:12px;color:var(--text2);font-weight:300;line-height:1.6;">Desi Nomad charges <strong style="color:var(--gold);">₹6,500/month</strong> for a custom bot trained on your exact trips, prices & FAQs</div>
+    </div>
+  </div>
+
+  <div class="refund-note" style="margin-top:20px;">
     <span>⚠</span>
     <span>All payments are strictly non-refundable. We invest significant time and resources building your custom bot. Please ensure you are ready to proceed before payment.</span>
   </div>
-  <p style="color:var(--text3);font-size:13px;margin-top:36px;line-height:1.8;font-weight:300;">
-    💡 The math: One extra booking covers 2+ months of maintenance. The bot pays for itself from week one.
-  </p>
 </section>
 
 <!-- ═══ WHY US ═══ -->

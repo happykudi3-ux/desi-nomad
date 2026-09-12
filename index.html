@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desi Nomad — In City or Away from City, You Choose</title>
+<meta name="description" content="Real, verified hotel guides for India's hill stations — sorted by In City or Away from City, and by Budget, Deluxe or Luxury.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/logo-icon.png">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand" style="cursor:pointer;" data-page="home">
+      <img class="brand-mark" src="assets/img/logo-icon.png" alt="Desi Nomad">
+      <div>
+        <div class="brand-name">Desi Nomad</div>
+        <div class="brand-sub">In City or Away — You Choose</div>
+      </div>
+    </div>
+    <nav class="pages">
+      <button class="nav-btn active" data-page="home">Home</button>
+      <button class="nav-btn" data-page="destinations">Destinations</button>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="nav-btn" data-page="home">Home</button>
+    <button class="nav-btn" data-page="destinations">Destinations</button>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<div class="page active" id="page-home">
+
+  <div class="vhero">
+    <video autoplay muted loop playsinline poster="assets/img/hero-banner.jpg">
+      <source src="assets/video/hero.webm" type="video/webm">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="vhero-overlay"></div>
+    <div class="vhero-content">
+      <div class="vhero-inner">
+        <span class="watch-chip"><svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#9CD69A"/></svg> Filmed in the hills</span>
+        <h1>Stay <em>in the city</em>,<br>or stay <em>away</em><br>from it.</h1>
+        <p class="lede">Most travel guides just give you one hotel list. We split every hotel two ways — stays right in the city center, and stays a little further out and quieter — then tag each one Budget, Deluxe, or Luxury. Simple choice, no confusion.</p>
+        <div class="vhero-actions">
+          <button class="btn btn-dark" data-page="manali">See it in action: Manali →</button>
+          <button class="btn btn-ghost" data-page="nainital">Or Nainital →</button>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue">SCROLL</div>
+  </div>
+
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">How we sort every hotel</span>
+        <h2>Two simple groups. Three simple price tags.</h2>
+        <p>No fancy names, no confusing categories — just where it is, and what it costs.</p>
+      </div>
+      <div class="idea-grid">
+        <div class="idea-card">
+          <div class="dot dot-ink"></div>
+          <h3>In City Stay</h3>
+          <p>Right where the action is — walking distance to the main market, lake, or temple. Best if you want everything close by and don't mind some noise and crowds.</p>
+        </div>
+        <div class="idea-card">
+          <div class="dot dot-ochre"></div>
+          <h3>Away from City Stay</h3>
+          <p>A short drive out — quieter streets, often better value, sometimes real peace and mountain views. You'll need a cab or bike to reach the main market.</p>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:44px; margin-bottom:0;">
+        <p style="margin:0;">Within each group, every hotel is tagged <b>Budget Stay</b>, <b>Deluxe Stay</b>, or <b>Luxury Stay</b> — so you can filter by comfort level too, not just location.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="moments">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Life in the hills</span>
+        <h2>A few moments from the road</h2>
+        <p>Real footage, not stock — this is what the hills actually look like once you're there.</p>
+      </div>
+      <div class="moments-grid">
+        <div class="moment-wide">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video/moment-flags.webm" type="video/webm">
+            <source src="assets/video/moment-flags.mp4" type="video/mp4">
+          </video>
+          <div class="moment-cap">Prayer flags catching the wind</div>
+        </div>
+        <div class="moment-tall">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video/moment-clouds.webm" type="video/webm">
+            <source src="assets/video/moment-clouds.mp4" type="video/mp4">
+          </video>
+          <div class="moment-cap">Cloud line rolling over the ridge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:84px;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Where to next</span>
+        <h2>Destinations</h2>
+        <p>Manali, Nainital, Kasol, Coorg, Ooty, Kodaikanal and Thekkady are fully mapped out. The rest are on the board — guides go live only once they're properly researched.</p>
+      </div>
+      <div class="dest-photo-grid">
+        <div class="dcard" data-cat="himalayas" data-page="manali">
+          <div class="ph"><img src="assets/img/card-manali.jpg" alt="Manali" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Manali</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard" data-cat="himalayas" data-page="nainital">
+          <div class="ph"><img src="assets/img/card-nainital.jpg" alt="Nainital" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Nainital</h4><div class="tag">Uttarakhand</div></div>
+        </div>
+        <div class="dcard" data-cat="himalayas" data-page="kasol">
+          <div class="ph"><img src="assets/img/card-kasol.jpg" alt="Kasol" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Kasol</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="coorg">
+          <div class="ph"><img src="assets/img/card-coorg.jpg" alt="Coorg" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Coorg</h4><div class="tag">Karnataka</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="ooty">
+          <div class="ph"><img src="assets/img/card-ooty.jpg" alt="Ooty" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Ooty</h4><div class="tag">Tamil Nadu</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="kodaikanal">
+          <div class="ph"><img src="assets/img/card-kodaikanal.jpg" alt="Kodaikanal" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Kodaikanal</h4><div class="tag">Tamil Nadu</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="thekkady">
+          <div class="ph"><img src="assets/img/card-thekkady.jpg" alt="Thekkady" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Thekkady</h4><div class="tag">Kerala</div></div>
+        </div>
+      </div>
+      <div style="margin-top:34px;">
+        <button class="btn btn-ghost" data-page="destinations">See all destinations →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= DESTINATIONS ================= -->
+<div class="page" id="page-destinations">
+  <section style="padding-top:56px;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Full list</span>
+        <h2>All destinations</h2>
+        <p>13 destinations on the board across two regions. Tap a live guide to see the full In City / Away from City breakdown.</p>
+      </div>
+      <div class="filter-row">
+        <div class="seg">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="himalayas">Himalayas &amp; Hills</button>
+          <button data-filter="south">South India</button>
+        </div>
+      </div>
+      <div class="dest-photo-grid">
+        <div class="dcard" data-cat="himalayas" data-page="manali">
+          <div class="ph"><img src="assets/img/card-manali.jpg" alt="Manali" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Manali</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard" data-cat="himalayas" data-page="nainital">
+          <div class="ph"><img src="assets/img/card-nainital.jpg" alt="Nainital" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Nainital</h4><div class="tag">Uttarakhand</div></div>
+        </div>
+        <div class="dcard soon" data-cat="himalayas">
+          <div class="ph"><img src="assets/img/card-shimla.jpg" alt="Shimla" loading="lazy"></div>
+          <div class="status">○ Coming soon</div>
+          <div class="body"><h4>Shimla</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard" data-cat="himalayas" data-page="kasol">
+          <div class="ph"><img src="assets/img/card-kasol.jpg" alt="Kasol" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Kasol</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard soon" data-cat="himalayas">
+          <div class="ph"><img src="assets/img/card-corbett.jpg" alt="Jim Corbett" loading="lazy"></div>
+          <div class="status">○ Coming soon</div>
+          <div class="body"><h4>Jim Corbett</h4><div class="tag">Uttarakhand</div></div>
+        </div>
+        <div class="dcard soon" data-cat="himalayas">
+          <div class="ph"><img src="assets/img/card-ladakh.jpg" alt="Ladakh" loading="lazy"></div>
+          <div class="status">○ Coming soon</div>
+          <div class="body"><h4>Ladakh</h4><div class="tag">Union Territory</div></div>
+        </div>
+        <div class="dcard soon" data-cat="himalayas">
+          <div class="ph" style="background:linear-gradient(135deg, var(--sage-light), var(--paper-deep));"></div>
+          <div class="status">○ Coming soon</div>
+          <div class="body"><h4>Spiti</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard soon" data-cat="himalayas">
+          <div class="ph" style="background:linear-gradient(135deg, var(--sage-light), var(--paper-deep));"></div>
+          <div class="status">○ Coming soon</div>
+          <div class="body"><h4>Pahalgam</h4><div class="tag">Jammu & Kashmir</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="coorg">
+          <div class="ph"><img src="assets/img/card-coorg.jpg" alt="Coorg" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Coorg</h4><div class="tag">Karnataka</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="ooty">
+          <div class="ph"><img src="assets/img/card-ooty.jpg" alt="Ooty" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Ooty</h4><div class="tag">Tamil Nadu</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="kodaikanal">
+          <div class="ph"><img src="assets/img/card-kodaikanal.jpg" alt="Kodaikanal" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Kodaikanal</h4><div class="tag">Tamil Nadu</div></div>
+        </div>
+        <div class="dcard soon" data-cat="south">
+          <div class="ph" style="background:linear-gradient(135deg, var(--sage-light), var(--paper-deep));"></div>
+          <div class="status">○ Coming soon</div>
+          <div class="body"><h4>Munnar</h4><div class="tag">Kerala</div></div>
+        </div>
+        <div class="dcard" data-cat="south" data-page="thekkady">
+          <div class="ph"><img src="assets/img/card-thekkady.jpg" alt="Thekkady" loading="lazy"></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Thekkady</h4><div class="tag">Kerala</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-manali">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-manali.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Himachal Pradesh · Himalayas &amp; Hills</span>
+      <h1>Manali</h1>
+      <p class="sub">A Beas-side hill town split into two very different personalities — buzzing Mall Road and Old Manali, and the quieter villages fifteen minutes up the valley. Which one you sleep in decides which trip you have.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Mar–Jun, Oct–Dec</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Bhuntar (Kullu), 50km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">4–6 days</div></div>
+        <div class="fact"><div class="k">Altitude</div><div class="v">~2,050m</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices and links further down are real, verified 2026 listings.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a little extra for the unplanned chai stop.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹1,400 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹500</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹450</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹250</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹3,200 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹1,800</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹800</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹350</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹250</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹7,500 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹5,000</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹1,600</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹500</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹400</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>Every hotel below is real and verified — tap the link to visit the hotel's own website.</p>
+      </div>
+      <div class="stay-grid2">
+        <div class="stay-card">
+          <div class="stay-band band-ink"></div>
+          <div class="stay-body">
+            <h3>In City Stay</h3>
+            <div class="where">Mall Road, Hidimba &amp; Aleo — 2–8 min out</div>
+            <p class="desc">Walking distance to the market, cafés, and Hidimba Temple. Best if you want to step outside and be right in the middle of it.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Mountain Top Hotel</div><span class="hotel-tag tag-budget">Budget Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹1,800–3,200</div><div class="hotel-rating">★ 4.1 · 1,100+</div></div>
+              </div>
+              <div class="hotel-sub">Walking distance to Hidimba Temple, 7 min to Mall Rd</div>
+              <a class="hotel-link" href="http://www.mountaintophotel.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Woodstock Inn</div><span class="hotel-tag tag-budget">Budget Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹2,200–3,800</div><div class="hotel-rating">★ 4.6 · 1,500+</div></div>
+              </div>
+              <div class="hotel-sub">Left Bank, Aleo — 5 min to Mall Rd</div>
+              <a class="hotel-link" href="https://www.hotelwoodstockinn.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Honeymoon Inn</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹5,000–7,000</div><div class="hotel-rating">★ 4.5 · 2,600+</div></div>
+              </div>
+              <div class="hotel-sub">5 min Mall Rd, 8 min Old Manali</div>
+              <a class="hotel-link" href="https://www.honeymooninnmanali.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">The Himalayan</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹11,000–18,000</div><div class="hotel-rating">★ 4.4 · 740+</div></div>
+              </div>
+              <div class="hotel-sub">Castle-style luxury, 2 min to Hidimba Temple</div>
+              <a class="hotel-link" href="http://www.thehimalayan.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stay-card">
+          <div class="stay-band band-ochre"></div>
+          <div class="stay-body">
+            <h3>Away from City Stay</h3>
+            <div class="where">Prini, Simsa, Vashisht &amp; Solang — 10–15 min out</div>
+            <p class="desc">A short cab or bike ride from Mall Road. Quieter lanes, valley views, and more resort/spa comfort for the price than staying central.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Snow Valley Resorts</div><span class="hotel-tag tag-budget">Budget Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹3,000–4,500</div><div class="hotel-rating">★ 4.3 · 3,300+</div></div>
+              </div>
+              <div class="hotel-sub">Log Hut Area — 5–10 min to Mall Rd</div>
+              <a class="hotel-link" href="https://www.snowvalleyresorts.com/manali/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Holiday Heights &amp; Spa</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹5,500–7,500</div><div class="hotel-rating">★ 4.6 · 1,900+</div></div>
+              </div>
+              <div class="hotel-sub">Simsa Village — 10 min to Mall Rd, pool &amp; spa</div>
+              <a class="hotel-link" href="http://www.holidayheightsmanali.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">The Anantmaya Resort</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹6,500–8,500</div><div class="hotel-rating">★ 4.6 · 1,400+</div></div>
+              </div>
+              <div class="hotel-sub">Prini, near apple orchards — 12 min to Mall Rd</div>
+              <a class="hotel-link" href="http://www.anantmaya.in/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">ManuAllaya Resort &amp; Spa</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹9,000–13,500</div><div class="hotel-rating">★ 4.3 · 1,600+</div></div>
+              </div>
+              <div class="hotel-sub">Bashisht, near Vashisht Temple</div>
+              <a class="hotel-link" href="https://www.manuallaya.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Storii Urvashi's Retreat</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹10,000–16,000</div><div class="hotel-rating">★ ~4.5</div></div>
+              </div>
+              <div class="hotel-sub">Near Solang Valley — 15 min to Mall Rd, quietest of this group</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Storii+Urvashi's+Retreat+Manali" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data from a curated 2026 property survey (Google ratings, review counts, nightly rates as listed). Prices rise 30–100% in peak season (summer holidays, snowfall, New Year) — treat as a baseline, not a quote.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Fuel up</span><h2>Where to eat</h2></div>
+      <div class="eat-grid">
+        <div class="eat-card"><span class="label">Everyday / local</span><ul><li>Dhabas along Old Manali Road — thali, momos, ₹100–200/meal</li><li>Mall Road street stalls — maggi points, roadside chai</li></ul></div>
+        <div class="eat-card"><span class="label">Mid-range cafés</span><ul><li>Old Manali café strip — wood-fired pizza, Israeli-inspired menus, ₹300–500/meal</li><li>Vashisht cafés with hot-spring/valley views</li></ul></div>
+        <div class="eat-card"><span class="label">Worth the splurge</span><ul><li>Riverside multi-cuisine restaurants, ₹800–1,500/meal</li><li>In-resort dining in Naggar/Jibhi for a quiet, unhurried dinner</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Nearest airport is Bhuntar (Kullu-Manali), about 50km south, with limited direct flights — most travellers fly into Chandigarh or Delhi and take an overnight Volvo (9–12hrs) or a short connecting flight. Old Manali and Mall Road are walkable; reaching Vashisht, Prini, or the more remote villages needs a scooter rental or shared taxi.</p></div>
+        <div><h3>Best time to visit</h3><p>March–June for greenery and pleasant days before peak summer crowds; October–December for clear mountain views and the first snow, without the extreme cold and closures of deep winter (Jan–Feb).</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-nainital">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-nainital.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Uttarakhand · Himalayas &amp; Hills</span>
+      <h1>Nainital</h1>
+      <p class="sub">A lake town built almost entirely around Naini Lake and Mall Road — so tightly packed that "in city" and "away from city" mean something different here than in Manali. The real quiet is a 20-minute drive away, in Jeolikote.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Mar–Jun, Sep–Nov</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Pantnagar, ~65km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">3–5 days</div></div>
+        <div class="fact"><div class="k">Altitude</div><div class="v">~2,084m</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices and links further down are real, verified 2026 listings.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a boat ride on the lake.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹1,600 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹700</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹450</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹250</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹3,600 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹2,200</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹800</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹350</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹250</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹8,500 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹6,000</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹1,600</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹500</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹400</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>Every hotel below is real and verified — tap the link to visit the hotel's own website.</p>
+      </div>
+      <div class="stay-grid2">
+        <div class="stay-card">
+          <div class="stay-band band-ink"></div>
+          <div class="stay-body">
+            <h3>In City Stay</h3>
+            <div class="where">Mall Road &amp; Naini Lake — walking to 5 min out</div>
+            <p class="desc">Naini Lake, the Boat Club, and Tibetan Market all on foot. Best for evening lake walks and easy access to everything.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">LakeSide Inn Nainital</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,000–4,800</div><div class="hotel-rating">★ 4.0 · 1,700+</div></div></div>
+              <div class="hotel-sub">Naini Lake 1 min, Mall Road walking distance</div>
+              <a class="hotel-link" href="https://nainitallakesidein.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Lawrence Solitaire Resort</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹2,800–4,500</div><div class="hotel-rating">★ 4.7 · 1,500+</div></div></div>
+              <div class="hotel-sub">Mall Road &amp; Naini Lake, both 5 min</div>
+              <a class="hotel-link" href="https://www.lawrencegroup.in/the-hanric-by-lawrence-hotels/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Seasons Hotels By Xperience</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,500–5,000</div><div class="hotel-rating">★ 4.2 · 1,000+</div></div></div>
+              <div class="hotel-sub">Mall Road 2 min, Naini Lake 3 min</div>
+              <a class="hotel-link" href="http://www.seasonsnainital.com/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Namah Nainital (Radisson Individuals)</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹12,000–20,000</div><div class="hotel-rating">★ 4.5 · 3,000+</div></div></div>
+              <div class="hotel-sub">Mall Road walking distance, lakeside luxury</div>
+              <a class="hotel-link" href="https://www.radissonhotels.com/en-us/hotels/radisson-individuals-retreats-namah-nainital" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Naini Retreat</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹11,000–18,000</div><div class="hotel-rating">★ 4.3 · 2,700+</div></div></div>
+              <div class="hotel-sub">Former Maharaja's residence, 5 min to lake &amp; Mall Rd</div>
+              <a class="hotel-link" href="https://www.leisurehotels.co.in/the-naini-retreat-nainital/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Shervani Hilltop</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹10,000–16,000</div><div class="hotel-rating">★ 4.2 · 7,400+</div></div></div>
+              <div class="hotel-sub">Mall Road &amp; Naini Lake, both 5 min</div>
+              <a class="hotel-link" href="https://www.shervanihotels.com/hilltop-nainital/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stay-card">
+          <div class="stay-band band-ochre"></div>
+          <div class="stay-body">
+            <h3>Away from City Stay</h3>
+            <div class="where">Sherwani, Mallital &amp; Jeolikote — 5–20 min out</div>
+            <p class="desc">From a short walk near the High Court to a genuine 20-minute drive to Jeolikote — this group covers everything from "slightly quieter" to properly remote.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Earl's Court</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹6,000–8,500</div><div class="hotel-rating">★ 4.3 · 1,200+</div></div></div>
+              <div class="hotel-sub">Colonial-era heritage hotel, walking distance to High Court</div>
+              <a class="hotel-link" href="https://www.leisurehotels.co.in/the-earls-court-nainital/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Balrampur House</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹6,500–8,500</div><div class="hotel-rating">★ 4.4 · 590+</div></div></div>
+              <div class="hotel-sub">Royal heritage property, 2 min to High Court</div>
+              <a class="hotel-link" href="http://www.balrampurhousenainital.in/" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Cygnett Resort Mountain Breeze</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,000–9,000</div><div class="hotel-rating">★ 4.6 · 3,700+</div></div></div>
+              <div class="hotel-sub">Jeolikote, 20 min to Mall Rd, 25 min to Bhimtal — genuinely remote &amp; quiet</div>
+              <a class="hotel-link" href="https://www.cygnetthotels.com/cygnett-resort-mountain-breeze-nainital/unit-overview" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data from a curated 2026 property survey (Google ratings, review counts, nightly rates as listed). Prices rise in peak season (summer holidays, Diwali, New Year) — treat as a baseline, not a quote.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Fuel up</span><h2>Where to eat</h2><p class="mono" style="font-size:11.5px; color:var(--ink-soft);">⚠ Illustrative — not yet backed by verified restaurant research.</p></div>
+      <div class="eat-grid">
+        <div class="eat-card"><span class="label">Everyday / local</span><ul><li>Tibetan Market stalls — momos, thukpa, roadside chaat</li><li>Mall Road dhabas — thali &amp; North Indian staples</li></ul></div>
+        <div class="eat-card"><span class="label">Mid-range cafés</span><ul><li>Lakeside cafés along the Mall — continental &amp; multi-cuisine menus</li><li>Bakeries near Mallital for fresh pastries and coffee</li></ul></div>
+        <div class="eat-card"><span class="label">Worth the splurge</span><ul><li>Heritage-hotel dining rooms (Earl's Court, Balrampur House)</li><li>In-resort dining at the lakeside luxury properties</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Nearest airport is Pantnagar, about 65km away with limited flight options — most travellers fly into Delhi and drive up (6–7hrs) or take a train to Kathgodam, the nearest railhead at roughly 35km, followed by a short taxi ride. Mall Road and the lake are entirely walkable; reaching Jeolikote or Bhimtal needs a taxi or your own vehicle.</p></div>
+        <div><h3>Best time to visit</h3><p>March–June for clear skies and pleasant weather before peak summer crowds; September–November for post-monsoon clarity and fewer tourists. Monsoon (July–August) brings landslide risk on the approach roads. Winter (December–February) can bring snow — check road conditions before travelling.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-kasol">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-kasol.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Himachal Pradesh · Parvati Valley</span>
+      <h1>Kasol</h1>
+      <p class="sub">A riverside backpacker town on the Parvati River — cafés, trekking routes, and a laid-back crowd. Main Kasol is the walkable hub; the quieter side sits toward Jari and along the river before you hit the market.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Mar–Jun, Sep–Nov</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Bhuntar (Kullu), ~31km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">3–5 days</div></div>
+        <div class="fact"><div class="k">Altitude</div><div class="v">~1,580m</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices further down are real, verified 2026 listings you supplied.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — Kasol runs noticeably cheaper than Manali at the backpacker end.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹2,900 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹2,200</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹400</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹150</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹150</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹7,150 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹6,000</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹700</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹250</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹12,900 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹11,000</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹1,200</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹400</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹300</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>Every hotel below is real and verified. No hotel websites were supplied for Kasol — links go to Google Maps instead.</p>
+      </div>
+      <div class="stay-grid2">
+        <div class="stay-card">
+          <div class="stay-band band-ink"></div>
+          <div class="stay-body">
+            <h3>In City Stay</h3>
+            <div class="where">Main Kasol — market, cafés, Chalal Bridge</div>
+            <p class="desc">Walking distance to the market and riverside café strip. Best for the social backpacker scene and easy access to everything.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Hosteller Kasol</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹1,000–3,000</div><div class="hotel-rating">★ 4.7/5 · 8,300+</div></div></div>
+              <div class="hotel-sub">Kasol Temple, Main Market, Riverside Cafés — backpacker favourite, bonfire evenings</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=The+Hosteller+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Whoopers Boutique Kasol</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹1,200–3,500</div><div class="hotel-rating">★ 4.8/5 · 4,800+</div></div></div>
+              <div class="hotel-sub">Kasol Market 2 min, Parvati River 3 min, Chalal Bridge 5 min — modern dorms &amp; private rooms</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Whoopers+Boutique+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Hotel Kasol Inn</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹2,500–4,500</div><div class="hotel-rating">★ 4.6/5 · 1,000+</div></div></div>
+              <div class="hotel-sub">Kasol Market, Manikaran Road, Riverside</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+Kasol+Inn" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Royal Castle Kasol (SOHO Kasol)</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹4,500–7,000</div><div class="hotel-rating">★ 4.7/5 · 2,400+</div></div></div>
+              <div class="hotel-sub">Old Kasol, Chalal Bridge, riverside cafés — walking distance to cafés</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Royal+Castle+Kasol+SOHO+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Moksha Riverside Resort &amp; Spa</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹6,000–9,000</div><div class="hotel-rating">★ 4.4/5 · 1,900+</div></div></div>
+              <div class="hotel-sub">Parvati River on property, Kasol Market 5 min, Manikaran Sahib 10 min</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Moksha+Riverside+Resort+Spa+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Hotel Hukam's Holiday Home</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹6,000–10,000</div><div class="hotel-rating">★ 4.5/5 · 1,400+</div></div></div>
+              <div class="hotel-sub">Kasol Market, Manikaran, riverside cafés — mountain-facing balconies</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+Hukam's+Holiday+Home+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stay-card">
+          <div class="stay-band band-ochre"></div>
+          <div class="stay-body">
+            <h3>Away from City Stay</h3>
+            <div class="where">Toward Jari &amp; before Kasol Market — quieter riverside</div>
+            <p class="desc">A short drive out, trading walkable convenience for mountain silence and river views.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Hillside Kasol</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹4,000–6,500</div><div class="hotel-rating">★ 4.7/5 · 800+</div></div></div>
+              <div class="hotel-sub">Kasol Village, Parvati Valley viewpoints, riverside — peaceful, scenic mountain views</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=The+Hillside+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Parvati Kuteer</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,500–12,000</div><div class="hotel-rating">★ 4.5/5 · 1,400+</div></div></div>
+              <div class="hotel-sub">2.5km before Kasol Market, Parvati River, Manikaran Sahib — riverside cottages</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Parvati+Kuteer+Kasol" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Itsy Bitsy Cabin</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹10,000–16,000</div><div class="hotel-rating">★ 4.7/5 · 1,100+</div></div></div>
+              <div class="hotel-sub">Jari Village, Kasol 15 min drive — premium wooden cabins, quiet location</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Itsy+Bitsy+Cabin+Jari" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data supplied directly and verified (Google ratings, review counts, nightly rates as listed). No hotel websites were provided — links go to Google Maps.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Fuel up</span><h2>Where to eat</h2><p class="mono" style="font-size:11.5px; color:var(--ink-soft);">⚠ Illustrative — not yet backed by verified restaurant research.</p></div>
+      <div class="eat-grid">
+        <div class="eat-card"><span class="label">Everyday / local</span><ul><li>Dhabas along the main market lane — thali, Maggi points</li><li>Bakeries and juice stalls near the bus stand</li></ul></div>
+        <div class="eat-card"><span class="label">Mid-range cafés</span><ul><li>Riverside cafés with Israeli-inspired menus — Kasol's signature scene</li><li>Live-music cafés toward Chalal</li></ul></div>
+        <div class="eat-card"><span class="label">Worth the splurge</span><ul><li>In-resort dining at Moksha Riverside or Parvati Kuteer</li><li>Cabin-side private dinners at Itsy Bitsy Cabin, Jari</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Nearest airport is Bhuntar (Kullu-Manali), about 31km away, with limited direct flights — most travellers fly into Chandigarh or Delhi and take an overnight Volvo or taxi. Main Kasol is walkable; reaching Jari, Chalal, or Tosh needs a taxi, shared cab, or a scenic walk over the suspension bridge.</p></div>
+        <div><h3>Best time to visit</h3><p>March–June for pleasant trekking weather before monsoon; September–November for clear valley views after the rains. Winter (Dec–Feb) brings snow and a quieter, colder version of the town.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-coorg">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-coorg.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Karnataka · Kodagu</span>
+      <h1>Coorg</h1>
+      <p class="sub">Coffee plantation country in the Western Ghats — waterfalls, wildlife, and estate stays. The source data here doesn't distinguish location per hotel, so this page skips the In City / Away from City split rather than fake one.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Oct–Mar</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Mangalore, ~135km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">3–4 days</div></div>
+        <div class="fact"><div class="k">Region</div><div class="v">Western Ghats</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices further down are real, verified 2026 listings you supplied — but every property shares the same generic "nearby" text (Madikeri Fort, Raja's Seat, Abbey Falls, "depending on property"), so there isn't enough per-hotel location detail to sort into In City / Away from City. Grouped by price tier only.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a coffee-estate tour.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹4,650 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹3,800</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹500</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹200</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹150</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹10,500 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹9,100</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹900</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹300</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹35,100 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹31,500</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹2,500</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹700</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹400</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>All 9 properties below are real and verified, grouped by price tier only — the location data provided wasn't specific enough per hotel to split further.</p>
+      </div>
+      <div class="stay-grid2" style="grid-template-columns:1fr;">
+        <div class="stay-card">
+          <div class="stay-band" style="background:var(--teal);"></div>
+          <div class="stay-body">
+            <h3>All Verified Stays</h3>
+            <div class="where">Coorg / Kodagu — near Madikeri, Raja's Seat &amp; Abbey Falls area (varies by property)</div>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Coorg Jungle Camp</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹2,500–4,500</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <div class="hotel-sub">Good for families, couples &amp; nature lovers</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Coorg+Jungle+Camp" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Treebo The Rove</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹2,500–5,000</div><div class="hotel-rating">★ 4.3/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Treebo+The+Rove" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Hotel Le Coorg</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,000–5,500</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+Le+Coorg" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Woodstock Villas</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹6,500–10,000</div><div class="hotel-rating">★ 4.6/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Woodstock+Villas" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Heritage Resort Coorg</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,000–11,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Heritage+Resort+Coorg" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Purple Palms Resort</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹8,000–12,000</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Purple+Palms+Resort" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Coorg Wilderness Resort</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹16,000–28,000</div><div class="hotel-rating">★ 4.7/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Coorg+Wilderness+Resort" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Tamara Coorg</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹22,000–40,000</div><div class="hotel-rating">★ 4.8/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=The+Tamara+Coorg" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Evolve Back Coorg</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹28,000–55,000</div><div class="hotel-rating">★ 4.8/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Evolve+Back+Coorg" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data supplied directly and verified (Google ratings, nightly rates, Google Maps links as provided). No per-hotel proximity or review-count data was included this time — worth requesting for a future update to unlock the In City / Away from City split.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Don't miss</span><h2>Top attractions</h2></div>
+      <div class="eat-grid">
+        <div class="eat-card"><span class="label">Waterfalls &amp; nature</span><ul><li>Abbey Falls</li><li>Mandalpatti Viewpoint</li><li>Talacauvery</li></ul></div>
+        <div class="eat-card"><span class="label">Culture &amp; heritage</span><ul><li>Raja's Seat</li><li>Nisargadhama</li></ul></div>
+        <div class="eat-card"><span class="label">Wildlife</span><ul><li>Dubare Elephant Camp</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Nearest airport is Mangalore, about 135km away; Bengaluru is a more common gateway for domestic flights, roughly a 5–6hr drive from there. A rented car or taxi is the easiest way to get between estates and attractions once in Coorg.</p></div>
+        <div><h3>Best time to visit</h3><p>October–March for the clearest weather and coffee-harvest season. Book luxury resorts well in advance for weekends and holidays — availability tightens fast in this range.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-thekkady">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-thekkady.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Kerala · Idukki District</span>
+      <h1>Thekkady</h1>
+      <p class="sub">Periyar Wildlife Sanctuary, spice plantations, and bamboo rafting — built almost entirely around Kumily Town. This is one of the most compact hotel belts we've mapped: nearly everything sits within a 10-minute radius of the sanctuary gate.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Oct–Mar</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Madurai, ~130km / Kochi, ~190km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">2–3 days</div></div>
+        <div class="fact"><div class="k">Region</div><div class="v">Western Ghats</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices further down are real, verified 2026 listings you supplied. Thekkady's hotel belt is unusually compact — the Away from City tier here is thin and based partly on descriptive framing rather than hard distance data, flagged below.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a Periyar boat safari ticket.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹5,350 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹4,500</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹500</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹200</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹150</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹10,200 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹8,800</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹900</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹300</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹20,850 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹17,700</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹2,200</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹600</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹350</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>Every hotel below is real and verified. Seven of nine sit within 2–10 minutes of Kumily Market or the sanctuary gate — genuinely "in the thick of it" here. Two lack explicit distance data and lean toward forest/cottage framing instead, placed Away from City with that caveat noted.</p>
+      </div>
+      <div class="stay-grid2">
+        <div class="stay-card">
+          <div class="stay-band band-ink"></div>
+          <div class="stay-body">
+            <h3>In City Stay</h3>
+            <div class="where">Kumily Town — 2–10 min to Periyar / the market</div>
+            <p class="desc">Walking or a short ride to the sanctuary gate, spice market, and restaurants.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Woodnote Resort</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,000–5,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <div class="hotel-sub">Kumily Town 2 min, Periyar National Park 5 min, Spice Gardens 5 min</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Woodnote+Resort+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Peppervine Hotel</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,500–5,500</div><div class="hotel-rating">★ 4.6/5</div></div></div>
+              <div class="hotel-sub">Kumily Market 2 min, Periyar Tiger Reserve 5 min, Elephant Junction 10 min — rooftop pool</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Peppervine+Hotel+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Coffee Routes Resort</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹4,000–6,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <div class="hotel-sub">Kumily Market 5 min, Periyar Wildlife Sanctuary 10 min — coffee plantation views</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Coffee+Routes+Resort+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Greenwoods Resort</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,000–10,000</div><div class="hotel-rating">★ 4.6/5</div></div></div>
+              <div class="hotel-sub">Kumily Market 3 min, Periyar Tiger Reserve 5 min — outdoor pool, Ayurvedic spa</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Greenwoods+Resort+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Cardamom County by Xandari</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹8,000–12,000</div><div class="hotel-rating">★ 4.6/5</div></div></div>
+              <div class="hotel-sub">Periyar Tiger Reserve walking distance, Kumily Market 5 min — honeymoon pick</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Cardamom+County+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Spice Village – CGH Earth</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹14,000–22,000</div><div class="hotel-rating">★ 4.7/5</div></div></div>
+              <div class="hotel-sub">Periyar Wildlife Sanctuary 5 min, Kumily Market 3 min — eco-friendly cottages, organic cuisine</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Spice+Village+CGH+Earth+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Niraamaya Retreats Cardamom Club</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹15,000–25,000</div><div class="hotel-rating">★ 4.7/5</div></div></div>
+              <div class="hotel-sub">Periyar Tiger Reserve 5 min, Kumily Town 5 min — luxury cottages, honeymoon pick</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Niraamaya+Retreats+Cardamom+Club+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stay-card">
+          <div class="stay-band band-ochre"></div>
+          <div class="stay-body">
+            <h3>Away from City Stay</h3>
+            <div class="where">Periyar Forest Area — cottage/forest-set properties</div>
+            <p class="desc">No explicit "X min to Kumily" was given for either property here — placement is based on their forest-cottage framing rather than confirmed distance. Verify before publishing.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Abad Green Forest Resort</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹6,500–9,500</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <div class="hotel-sub">Periyar National Park, Elephant Camp, Spice Market — cottage-style, nature walks</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Abad+Green+Forest+Resort+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Elephant Court Resort</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹12,000–18,000</div><div class="hotel-rating">★ 4.6/5</div></div></div>
+              <div class="hotel-sub">Periyar National Park, Elephant Junction, Spice Gardens — luxury suites, spa &amp; wellness</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Elephant+Court+Thekkady" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data supplied directly and verified (Google ratings, nightly rates, Google Maps links as provided). Peak-season and honeymoon-weekend bookings for the Deluxe/Luxury tier fill up fast — book ahead.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Don't miss</span><h2>Top attractions</h2></div>
+      <div class="eat-grid">
+        <div class="eat-card"><span class="label">Wildlife &amp; nature</span><ul><li>Periyar Tiger Reserve — 5–10 min from most stays</li><li>Periyar Lake Boat Safari — 10 min</li><li>Bamboo rafting &amp; jungle trekking</li></ul></div>
+        <div class="eat-card"><span class="label">Culture &amp; shopping</span><ul><li>Kumily Spice Market — walking distance</li><li>Abraham's Spice Garden — 10 min</li></ul></div>
+        <div class="eat-card"><span class="label">Further out</span><ul><li>Elephant Junction — 10 min</li><li>Mangala Devi Temple — 1hr, seasonal access</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Nearest airports are Madurai (~130km) and Kochi (~190km); most travellers arrive by road from either. Kumily Town is walkable; the sanctuary and most resorts are within a short auto or taxi ride.</p></div>
+        <div><h3>Best time to visit</h3><p>October–March for pleasant weather, wildlife safaris, and boating on Periyar Lake. Book resorts close to Kumily for the best balance of convenience and access to attractions.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-ooty">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-ooty.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Tamil Nadu · Nilgiris</span>
+      <h1>Ooty</h1>
+      <p class="sub">The "Queen of Hill Stations" — tea gardens, the toy train, and Ooty Lake. The source data here is name/price/rating only, with no proximity detail at all, so this page skips the In City / Away from City split rather than fake one.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Apr–Jun, Sep–Nov</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Coimbatore, ~90km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">2–3 days</div></div>
+        <div class="fact"><div class="k">Altitude</div><div class="v">~2,240m</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices are real, verified 2026 listings you supplied — but no nearby-attraction or proximity detail was included, so there isn't enough per-hotel location data to sort into In City / Away from City. Grouped by price tier only.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a toy train ticket.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹4,800 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹4,000</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹450</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹200</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹150</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹10,550 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹9,250</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹800</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹300</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹20,450 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹17,500</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹2,000</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹600</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹350</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>All 9 properties below are real and verified, grouped by price tier only.</p>
+      </div>
+      <div class="stay-grid2" style="grid-template-columns:1fr;">
+        <div class="stay-card">
+          <div class="stay-band" style="background:var(--teal);"></div>
+          <div class="stay-body">
+            <h3>All Verified Stays</h3>
+            <div class="where">Ooty — no per-hotel location data provided</div>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Zostel Ooty</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹2,000–4,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Zostel+Ooty" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Hotel Lakeview</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,000–5,000</div><div class="hotel-rating">★ 4.3/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+Lakeview+Ooty" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Mango Hill</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹4,000–6,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Mango+Hill+Ooty" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Sterling Ooty Elk Hill</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,000–11,000</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Sterling+Ooty+Elk+Hill" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Gem Park</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,500–10,000</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Gem+Park+Ooty" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Fortune Resort Sullivan Court</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹8,000–12,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Fortune+Resort+Sullivan+Court" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Sinclairs Retreat</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹12,000–18,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Sinclairs+Retreat+Ooty" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Club Mahindra Derby Green</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹12,000–20,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Club+Mahindra+Derby+Green" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Savoy IHCL SeleQtions</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹15,000–28,000</div><div class="hotel-rating">★ 4.7/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Savoy+IHCL+SeleQtions+Ooty" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data supplied directly and verified (Google ratings, nightly rates, Google Maps links as provided). No nearby-attraction or proximity data was included this time — worth requesting for a future update to unlock the In City / Away from City split.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Nearest airport is Coimbatore, about 90km away — roughly a 3hr drive, including the scenic ghat road up. The Nilgiri Mountain Railway (toy train) also connects Ooty to Mettupalayam near Coimbatore.</p></div>
+        <div><h3>Best time to visit</h3><p>April–June for pleasant summer weather (a popular escape from South Indian heat); September–November for clear post-monsoon skies. Winter (Dec–Feb) can get quite cold at this altitude.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-kodaikanal">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-kodaikanal.jpg" alt=""></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Tamil Nadu · Palani Hills</span>
+      <h1>Kodaikanal</h1>
+      <p class="sub">Star-shaped Kodai Lake, pine forests, and misty viewpoints. Like Ooty, the source data here is name/price/rating only — grouped by price tier rather than a guessed location split.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Apr–Jun, Sep–Oct</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Madurai, ~120km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">2–3 days</div></div>
+        <div class="fact"><div class="k">Altitude</div><div class="v">~2,133m</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices are real, verified 2026 listings you supplied — but no nearby-attraction or proximity detail was included, so there isn't enough per-hotel location data to sort into In City / Away from City. Grouped by price tier only.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a boat ride on Kodai Lake.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹5,600 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹4,800</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹450</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹200</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹150</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹11,550 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹10,200</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹850</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹300</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹23,650 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹20,500</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹2,200</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹600</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹350</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>All 9 properties below are real and verified, grouped by price tier only.</p>
+      </div>
+      <div class="stay-grid2" style="grid-template-columns:1fr;">
+        <div class="stay-card">
+          <div class="stay-band" style="background:var(--teal);"></div>
+          <div class="stay-body">
+            <h3>All Verified Stays</h3>
+            <div class="where">Kodaikanal — no per-hotel location data provided</div>
+
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Hotel JC Residency</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹3,000–5,000</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+JC+Residency+Kodaikanal" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Kodai Resort Hotel</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹4,000–6,000</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Kodai+Resort+Hotel" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Villa Retreat</div><span class="hotel-tag tag-budget">Budget Stay</span></div><div class="hotel-right"><div class="hotel-price">₹4,500–6,500</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Villa+Retreat+Kodaikanal" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Le Poshe</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹7,000–11,000</div><div class="hotel-rating">★ 4.3/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Le+Poshe+Kodaikanal" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Sterling Kodai Lake</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹8,000–12,000</div><div class="hotel-rating">★ 4.4/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Sterling+Kodai+Lake" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Carlton</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div><div class="hotel-right"><div class="hotel-price">₹9,000–14,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=The+Carlton+Kodaikanal" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Carlton Suites</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹14,000–22,000</div><div class="hotel-rating">★ 4.5/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=The+Carlton+Suites+Kodaikanal" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">Great Trails Kodaikanal</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹15,000–24,000</div><div class="hotel-rating">★ 4.6/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Great+Trails+Kodaikanal" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+            <div class="hotel-row">
+              <div class="hotel-top"><div><div class="hotel-name">The Tamara Kodai</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div><div class="hotel-right"><div class="hotel-price">₹18,000–30,000</div><div class="hotel-rating">★ 4.8/5</div></div></div>
+              <a class="hotel-link" href="https://maps.google.com/?q=The+Tamara+Kodai" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">⚠ EDITOR NOTE — content gap: the original page's data-provenance note and the "Where to eat" / "Getting there &amp; around" / "Best time to visit" sections for Kodaikanal were lost (the live page's HTML cut off mid-sentence here — this is the bug the navigation-fix work uncovered). Please supply the missing text and we'll drop it straight in.</div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-brand">
+      <img src="assets/img/logo-icon.png" alt="Desi Nomad">
+      <div>
+        <div class="serif" style="font-size:18px;">Desi Nomad</div>
+        <div class="mono" style="font-size:10px; letter-spacing:0.1em; color:#9DB08A; text-transform:uppercase; margin-top:2px;">Plan before you travel</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <span>© 2026 Desi Nomad</span>
+      <span>Hotel data supplied &amp; verified where noted</span>
+      <span>Ask Hazel for a custom itinerary →</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Ask Hazel chat launcher -->
+<button class="hazel-launcher" id="hazelLauncher"><span class="dot"></span> Ask Hazel</button>
+<div class="hazel-panel" id="hazelPanel">
+  <div class="hazel-panel-head">
+    <span class="htitle">✨ Ask Hazel — AI Travel Planner</span>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a href="https://desi-nomads-hazel.vercel.app/" target="_blank" rel="noopener">Open full screen ↗</a>
+      <button class="hazel-panel-close" id="hazelClose" aria-label="Close">×</button>
+    </div>
+  </div>
+  <iframe id="hazelFrame" data-src="https://desi-nomads-hazel.vercel.app/" title="Hazel AI Travel Planner"></iframe>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body></html>

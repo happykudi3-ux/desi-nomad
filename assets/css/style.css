@@ -1,10 +1,14 @@
-//* Desi Nomad — production stylesheet
+/* Desi Nomad — production stylesheet
    Palette: sage-green redesign. Content classes (dest-hero, budget-grid,
    stay-grid2, hotel-*, eat-grid, info-cols, source-note, etc.) are kept
    from the original site so all real hotel/cost data ports over untouched —
    only the color tokens and the header/hero/destinations treatment changed. */
 
 :root{
+  color-scheme: light; /* tells browsers/phones this page is light-only, so they don't
+                           auto-invert colors under a system/browser "force dark" setting —
+                           that inversion was what made light-on-dark and dark-on-light
+                           blocks (the hero button, the sage moments section) go illegible. */
   --paper:#FBF2DE; --paper-deep:#F1E7CE; --ink:#241708; --ink-soft:#6B5C4A;
   --teal:#4E5F47;        /* was warm brown — now sage (labels, links) */
   --teal-soft:#8FA283;   /* soft sage */

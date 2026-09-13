@@ -14,11 +14,17 @@
 
 <header>
   <div class="nav-wrap">
-    <div class="brand" style="cursor:pointer;" data-page="home">
-      <img class="brand-mark" src="assets/img/logo-icon.png" alt="Desi Nomad">
-      <div>
-        <div class="brand-name">Desi Nomad</div>
-        <div class="brand-sub">In City or Away — You Choose</div>
+    <div class="nav-left">
+      <button class="back-btn" id="backBtn" aria-label="Go back" style="display:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        Back
+      </button>
+      <div class="brand" style="cursor:pointer;" data-page="home">
+        <img class="brand-mark" src="assets/img/logo-icon.png" alt="Desi Nomad">
+        <div>
+          <div class="brand-name">Desi Nomad</div>
+          <div class="brand-sub">In City or Away — You Choose</div>
+        </div>
       </div>
     </div>
     <nav class="pages">
@@ -39,10 +45,20 @@
 <div class="page active" id="page-home">
 
   <div class="vhero">
-    <video autoplay muted loop playsinline poster="assets/img/hero-banner.jpg">
-      <source src="assets/video/hero.webm" type="video/webm">
-      <source src="assets/video/hero.mp4" type="video/mp4">
-    </video>
+    <div class="vhero-bg-stack">
+      <video class="vhero-bg active" autoplay muted loop playsinline poster="assets/img/hero-banner.jpg">
+        <source src="assets/video/hero.webm" type="video/webm">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <video class="vhero-bg" muted loop playsinline poster="assets/img/hero-ooty.jpg">
+        <source src="assets/video/hero-ooty.webm" type="video/webm">
+        <source src="assets/video/hero-ooty.mp4" type="video/mp4">
+      </video>
+      <video class="vhero-bg" muted loop playsinline poster="assets/img/hero-shimla.jpg">
+        <source src="assets/video/hero-shimla.webm" type="video/webm">
+        <source src="assets/video/hero-shimla.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="vhero-overlay"></div>
     <div class="vhero-content">
       <div class="vhero-inner">
@@ -91,26 +107,12 @@
         <p>Real footage, not stock — this is what the hills actually look like once you're there.</p>
       </div>
       <div class="moments-grid">
-        <div class="moment-wide">
-          <video autoplay muted loop playsinline>
-            <source src="assets/video/moment-flags.webm" type="video/webm">
-            <source src="assets/video/moment-flags.mp4" type="video/mp4">
-          </video>
-          <div class="moment-cap">Prayer flags catching the wind</div>
-        </div>
-        <div class="moment-wide">
+        <div class="moment-wide moment-solo">
           <video autoplay muted loop playsinline>
             <source src="assets/video/moment-snow.webm" type="video/webm">
             <source src="assets/video/moment-snow.mp4" type="video/mp4">
           </video>
           <div class="moment-cap">Above the snow line</div>
-        </div>
-        <div class="moment-tall">
-          <video autoplay muted loop playsinline>
-            <source src="assets/video/moment-clouds.webm" type="video/webm">
-            <source src="assets/video/moment-clouds.mp4" type="video/mp4">
-          </video>
-          <div class="moment-cap">Cloud line rolling over the ridge</div>
         </div>
       </div>
     </div>
@@ -591,7 +593,7 @@
 </div>
 <div class="page" id="page-kasol">
   <section class="dest-hero">
-    <div class="dest-banner"><img src="assets/img/banner-kasol.jpg" alt=""></div>
+    <div class="dest-banner"><video autoplay muted loop playsinline poster="assets/img/banner-kasol.jpg"><source src="assets/video/banner-kasol-video.webm" type="video/webm"><source src="assets/video/banner-kasol-video.mp4" type="video/mp4"></video></div>
     <div class="wrap">
       <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
       <span class="label">Himachal Pradesh · Parvati Valley</span>

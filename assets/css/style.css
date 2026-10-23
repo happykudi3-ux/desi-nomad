@@ -107,7 +107,7 @@ section{ padding:84px 28px; }
 .moment-wide{ position:relative; border-radius:6px; overflow:hidden; min-height:340px; }
 .moment-wide.moment-solo{ min-height:460px; }
 @media(max-width:640px){ .moment-wide.moment-solo{ min-height:300px; } }
-.moment-wide video{ width:100%; height:100%; object-fit:cover; display:block; }
+.moment-wide video, .moment-wide img{ width:100%; height:100%; object-fit:cover; display:block; }
 .moment-cap{ position:absolute; left:20px; bottom:18px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.04em; background:rgba(36,23,8,0.5); padding:7px 12px; border-radius:20px; backdrop-filter:blur(4px); }
 .moment-tall{ position:relative; border-radius:6px; overflow:hidden; min-height:340px; }
 .moment-tall video{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -230,3 +230,50 @@ footer .label{ color:#C9D6BC; }
 .hazel-panel-close{ background:none; border:none; color:#FBF2DE; font-size:18px; line-height:1; padding:2px 6px; }
 .hazel-panel iframe{ flex:1; border:none; width:100%; }
 @media(max-width:480px){ .hazel-panel{ right:8px; left:8px; width:auto; bottom:8px; height:min(78vh, 640px); } .hazel-launcher{ right:16px; bottom:16px; } }
+
+/* ---------- Hover micro-animations ---------- */
+.brand{ transition:opacity .25s ease; }
+.brand:hover{ opacity:0.82; }
+.brand .brand-mark{ transition:transform .35s ease; }
+.brand:hover .brand-mark{ transform:rotate(-8deg) scale(1.07); }
+
+.btn-ghost{ transition:all .3s ease; }
+.btn-ghost:hover{ transform:translateY(-2px); }
+
+nav.pages button{ position:relative; }
+nav.pages button::after{ content:''; position:absolute; left:16px; right:16px; bottom:0; height:2px; background:var(--ochre); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+nav.pages button:hover::after{ transform:scaleX(1); }
+nav.pages button.active::after{ transform:scaleX(0); }
+
+.seg button{ position:relative; }
+.seg button:not(.active):hover{ background:rgba(36,23,8,0.05); }
+
+.idea-card{ transition:transform .3s ease, box-shadow .3s ease; }
+.idea-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+.idea-card .dot{ transition:transform .3s ease; }
+.idea-card:hover .dot{ transform:scale(1.25); }
+
+.eat-card{ transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.eat-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--sage-deep); }
+
+.moment-wide, .moment-tall{ transition:box-shadow .3s ease; }
+.moment-wide:hover, .moment-tall:hover{ box-shadow:var(--shadow); }
+.moment-wide video, .moment-wide img, .moment-tall video{ transition:transform .6s ease; }
+.moment-wide:hover video, .moment-wide:hover img, .moment-tall:hover video{ transform:scale(1.05); }
+
+.hotel-row{ transition:padding-left .25s ease, border-color .25s ease; }
+.hotel-row:hover{ padding-left:8px; border-top-color:var(--sage-deep); }
+.hotel-link{ transition:color .25s ease, gap .25s ease; }
+.hotel-link:hover{ color:var(--ink); }
+
+.menu-toggle{ transition:background .25s ease, border-color .25s ease; }
+.menu-toggle:hover{ background:rgba(36,23,8,0.05); border-color:var(--ink-soft); }
+
+.back-btn{ transition:background .2s ease, border-color .2s ease, transform .2s ease; }
+.back-btn:hover{ transform:translateX(-2px); }
+
+.foot-links a{ transition:color .25s ease; }
+.foot-links a:hover{ color:#FBF2DE; }
+
+.status, .tag{ transition:transform .25s ease; }
+.dcard:hover .status{ transform:translateY(-2px); }

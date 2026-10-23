@@ -82,19 +82,31 @@
         <p>No fancy names, no confusing categories — just where it is, and what it costs.</p>
       </div>
       <div class="idea-grid">
-        <div class="idea-card">
-          <div class="dot dot-ink"></div>
+        <div class="idea-card idea-card--dark">
+          <span class="idea-num">01</span>
+          <div class="idea-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="5" height="11"></rect><rect x="10.5" y="4.5" width="5" height="16.5"></rect><rect x="17" y="13" width="4" height="8"></rect><line x1="12.3" y1="8" x2="13.7" y2="8"></line><line x1="12.3" y1="11" x2="13.7" y2="11"></line></svg>
+          </div>
           <h3>In City Stay</h3>
           <p>Right where the action is — walking distance to the main market, lake, or temple. Best if you want everything close by and don't mind some noise and crowds.</p>
+          <div class="idea-meta">Walk to everything · Noise &amp; crowds</div>
         </div>
-        <div class="idea-card">
-          <div class="dot dot-ochre"></div>
+        <div class="idea-card idea-card--away">
+          <span class="idea-num">02</span>
+          <div class="idea-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="6" r="2"></circle><path d="M3 20l5.5-9 3.5 5 2-3 6 7z"></path></svg>
+          </div>
           <h3>Away from City Stay</h3>
           <p>A short drive out — quieter streets, often better value, sometimes real peace and mountain views. You'll need a cab or bike to reach the main market.</p>
+          <div class="idea-meta">Cab or bike needed · Real peace</div>
         </div>
       </div>
-      <div class="section-head" style="margin-top:44px; margin-bottom:0;">
-        <p style="margin:0;">Within each group, every hotel is tagged <b>Budget Stay</b>, <b>Deluxe Stay</b>, or <b>Luxury Stay</b> — so you can filter by comfort level too, not just location.</p>
+      <div class="price-tiers">
+        <span class="tier-label">Within each group, every hotel is tagged</span>
+        <span class="hotel-tag tag-budget">Budget Stay</span>
+        <span class="hotel-tag tag-deluxe">Deluxe Stay</span>
+        <span class="hotel-tag tag-luxury">Luxury Stay</span>
+        <span class="tier-label">— filter by comfort, not just location.</span>
       </div>
     </div>
   </section>
@@ -107,9 +119,13 @@
         <p>Real footage, not stock — this is what the hills actually look like once you're there.</p>
       </div>
       <div class="moments-grid">
-        <div class="moment-wide moment-solo">
+        <div class="moment-wide">
           <img src="assets/img/moment-road.jpg" alt="Misty hill road">
           <div class="moment-cap">Mist on the hill road</div>
+        </div>
+        <div class="moment-wide">
+          <img src="assets/img/moment-river.jpg" alt="River bend near Kasol">
+          <div class="moment-cap">River bend, a few moments off the road</div>
         </div>
       </div>
     </div>
@@ -120,13 +136,18 @@
       <div class="section-head">
         <span class="label">Where to next</span>
         <h2>Destinations</h2>
-        <p>Manali, Nainital, Kasol, Coorg, Ooty, Kodaikanal and Thekkady are fully mapped out. The rest are on the board — guides go live only once they're properly researched.</p>
+        <p>Manali, Shimla, Nainital, Kasol, Coorg, Ooty, Kodaikanal and Thekkady are fully mapped out. The rest are on the board — guides go live only once they're properly researched.</p>
       </div>
       <div class="dest-photo-grid">
         <div class="dcard" data-cat="himalayas" data-page="manali">
           <div class="ph"><img src="assets/img/card-manali.jpg" alt="Manali" loading="lazy"></div>
           <div class="status">● Guide live</div>
           <div class="body"><h4>Manali</h4><div class="tag">Himachal Pradesh</div></div>
+        </div>
+        <div class="dcard" data-cat="himalayas" data-page="shimla">
+          <div class="ph"><video autoplay muted loop playsinline poster="assets/img/card-shimla.jpg"><source src="assets/video/card-shimla.webm" type="video/webm"><source src="assets/video/card-shimla.mp4" type="video/mp4"></video></div>
+          <div class="status">● Guide live</div>
+          <div class="body"><h4>Shimla</h4><div class="tag">Himachal Pradesh</div></div>
         </div>
         <div class="dcard" data-cat="himalayas" data-page="nainital">
           <div class="ph"><img src="assets/img/card-nainital.jpg" alt="Nainital" loading="lazy"></div>
@@ -193,9 +214,9 @@
           <div class="status">● Guide live</div>
           <div class="body"><h4>Nainital</h4><div class="tag">Uttarakhand</div></div>
         </div>
-        <div class="dcard soon" data-cat="himalayas">
+        <div class="dcard" data-cat="himalayas" data-page="shimla">
           <div class="ph"><video autoplay muted loop playsinline poster="assets/img/card-shimla.jpg"><source src="assets/video/card-shimla.webm" type="video/webm"><source src="assets/video/card-shimla.mp4" type="video/mp4"></video></div>
-          <div class="status">○ Coming soon</div>
+          <div class="status">● Guide live</div>
           <div class="body"><h4>Shimla</h4><div class="tag">Himachal Pradesh</div></div>
         </div>
         <div class="dcard" data-cat="himalayas" data-page="kasol">
@@ -239,7 +260,7 @@
           <div class="body"><h4>Kodaikanal</h4><div class="tag">Tamil Nadu</div></div>
         </div>
         <div class="dcard soon" data-cat="south">
-          <div class="ph" style="background:linear-gradient(135deg, var(--sage-light), var(--paper-deep));"></div>
+          <div class="ph"><img src="assets/img/card-munnar.jpg" alt="Munnar" loading="lazy"></div>
           <div class="status">○ Coming soon</div>
           <div class="body"><h4>Munnar</h4><div class="tag">Kerala</div></div>
         </div>
@@ -433,6 +454,182 @@
       <div class="info-cols">
         <div><h3>Getting there &amp; around</h3><p>Nearest airport is Bhuntar (Kullu-Manali), about 50km south, with limited direct flights — most travellers fly into Chandigarh or Delhi and take an overnight Volvo (9–12hrs) or a short connecting flight. Old Manali and Mall Road are walkable; reaching Vashisht, Prini, or the more remote villages needs a scooter rental or shared taxi.</p></div>
         <div><h3>Best time to visit</h3><p>March–June for greenery and pleasant days before peak summer crowds; October–December for clear mountain views and the first snow, without the extreme cold and closures of deep winter (Jan–Feb).</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page" id="page-shimla">
+  <section class="dest-hero">
+    <div class="dest-banner"><img src="assets/img/banner-shimla.jpg" alt="Mall Road, Shimla"></div>
+    <div class="wrap">
+      <span class="back-link" onclick="showPage('destinations')">← All destinations</span>
+      <span class="label">Himachal Pradesh · Himalayas &amp; Hills</span>
+      <h1>Shimla</h1>
+      <p class="sub">The old British summer capital — Mall Road, The Ridge, and a stack of colonial-era heritage hotels strung along a pine ridge. A heritage toy train, a Gothic cathedral, and some of India's most storied luxury stays, all within walking distance of each other.</p>
+      <div class="facts-strip">
+        <div class="fact"><div class="k">Best time</div><div class="v">Oct–Dec, Feb–Mar</div></div>
+        <div class="fact"><div class="k">Nearest airport</div><div class="v">Chandigarh, ~120km</div></div>
+        <div class="fact"><div class="k">Ideal trip length</div><div class="v">2–3 days</div></div>
+        <div class="fact"><div class="k">Altitude</div><div class="v">~2,200m</div></div>
+      </div>
+      <div class="disclaimer">⚠ DAILY BUDGET NUMBERS BELOW ARE ROUGH ESTIMATES for food/transport. Hotel prices and ratings are sourced from live travel-booking listings (2026) and change with season and demand — always check the hotel's own website or current listings before booking.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Daily budget</span>
+        <h2>What a day actually costs</h2>
+        <p>Per person, per day — stay, food, local transport, and a little extra for a Mall Road coffee stop.</p>
+      </div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="tier-name">Budget Stay</div>
+          <div class="tier-total mono">₹1,750 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹800</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹450</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹300</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹200</span></div>
+        </div>
+        <div class="budget-card mid">
+          <div class="tier-name">Deluxe Stay</div>
+          <div class="tier-total mono">₹4,000 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹2,600</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹800</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹350</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹250</span></div>
+        </div>
+        <div class="budget-card">
+          <div class="tier-name">Luxury Stay</div>
+          <div class="tier-total mono">₹8,700 <span>/ day</span></div>
+          <div class="ledger-row"><span class="k">Stay</span><span class="v mono">₹6,000</span></div>
+          <div class="ledger-row"><span class="k">Food</span><span class="v mono">₹1,800</span></div>
+          <div class="ledger-row"><span class="k">Local transport</span><span class="v mono">₹500</span></div>
+          <div class="ledger-row"><span class="k">Misc / activities</span><span class="v mono">₹400</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Pick your spot</span>
+        <h2>Where to stay</h2>
+        <p>Every hotel below is real, researched from live booking listings — tap the link to visit the hotel's own site or Google Maps. Prices and ratings change with season; confirm before booking.</p>
+      </div>
+      <div class="stay-grid2">
+        <div class="stay-card">
+          <div class="stay-band band-ink"></div>
+          <div class="stay-body">
+            <h3>In City Stay</h3>
+            <div class="where">Mall Road &amp; The Ridge — 0–3 min out</div>
+            <p class="desc">Right on the pedestrian Mall and The Ridge itself — no cabs needed, everything from Christ Church to the Lakkar Bazaar market is a walk away.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">YMCA Tourist Hostel</div><span class="hotel-tag tag-budget">Budget Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹1,600–1,900</div><div class="hotel-rating">★ 4.2 · 225+</div></div>
+              </div>
+              <div class="hotel-sub">On The Ridge, next to Christ Church — 2 min to Mall Road</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=YMCA+Tourist+Hostel+Shimla" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Hotel Willow Banks</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹5,200–6,500</div><div class="hotel-rating">★ 4.1 · 2,300+</div></div>
+              </div>
+              <div class="hotel-sub">Near the Mall Road tourist lift — boutique 4-star on The Mall</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+Willow+Banks+Shimla" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Hotel Marina</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹6,700–8,100</div><div class="hotel-rating">★ ~4.5 · 45+</div></div>
+              </div>
+              <div class="hotel-sub">On The Mall, Shimla town centre</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Hotel+Marina+The+Mall+Shimla" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Clarkes Hotel</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹12,000–17,000</div><div class="hotel-rating">★ 4.5 · 1,890+</div></div>
+              </div>
+              <div class="hotel-sub">On The Mall — grand heritage hotel open since 1898</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Clarkes+Hotel+The+Mall+Shimla" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stay-card">
+          <div class="stay-band band-ochre"></div>
+          <div class="stay-body">
+            <h3>Away from City Stay</h3>
+            <div class="where">Chaura Maidan, Knollswood &amp; Mashobra — 10–25 min out</div>
+            <p class="desc">A short drive from Mall Road into quieter cedar-forest estates — this is where Shimla's grand resort hotels sit, away from the Mall Road crowds.</p>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Treebo Premium Torrentium</div><span class="hotel-tag tag-budget">Budget Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹2,350–3,450</div><div class="hotel-rating">★ ~3.5 · 29+</div></div>
+              </div>
+              <div class="hotel-sub">Knollswood, near Chhota Shimla — 2.3km from Mall Road</div>
+              <a class="hotel-link" href="https://maps.google.com/?q=Treebo+Premium+Torrentium+Shimla" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Radisson Hotel Shimla</div><span class="hotel-tag tag-deluxe">Deluxe Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹8,000–15,000</div><div class="hotel-rating">★ 4.0 · 1,631+</div></div>
+              </div>
+              <div class="hotel-sub">Goodwood Estate, Lower Bharari Road — short drive to Mall Road</div>
+              <a class="hotel-link" href="https://www.radissonhotels.com/en-us/hotels/radisson-shimla" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">The Oberoi Cecil</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹13,000–25,000</div><div class="hotel-rating">★ 4.5 · 7,600+</div></div>
+              </div>
+              <div class="hotel-sub">Chaura Maidan, near the Viceregal Lodge — 10 min drive to Mall Road</div>
+              <a class="hotel-link" href="https://www.oberoihotels.com/shimla" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+
+            <div class="hotel-row">
+              <div class="hotel-top">
+                <div><div class="hotel-name">Wildflower Hall, An Oberoi Resort</div><span class="hotel-tag tag-luxury">Luxury Stay</span></div>
+                <div class="hotel-right"><div class="hotel-price">₹22,000–47,000</div><div class="hotel-rating">★ ~4.8 · 520+</div></div>
+              </div>
+              <div class="hotel-sub">Chharabra, Mashobra — 7.7km out, a former Viceregal retreat in cedar forest</div>
+              <a class="hotel-link" href="https://www.oberoihotels.com/shimla" target="_blank" rel="noopener">Visit hotel website →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source-note">Hotel data researched from live travel-booking listings and Hotel Association of India 2026 tariff filings (Oct 2026) — rates swing with season, demand and booking channel. Treat these as a planning baseline, not a quote, and confirm directly with the hotel before booking.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head"><span class="label">Fuel up</span><h2>Where to eat</h2></div>
+      <div class="eat-grid">
+        <div class="eat-card"><span class="label">Everyday / local</span><ul><li>Indian Coffee House, The Mall/Lower Bazaar — long-running institution, South Indian food &amp; filter coffee</li></ul></div>
+        <div class="eat-card"><span class="label">Mid-range cafés</span><ul><li>Hide Out Café, The Mall, near the fire station</li><li>Honey Hut, Khadi Bhawan, Middle Bazaar — honey-themed snacks</li></ul></div>
+        <div class="eat-card"><span class="label">Worth the splurge</span><ul><li>Wake And Bake, The Mall, Middle Bazaar — two-storey diner with Mall Road views</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="info-cols">
+        <div><h3>Getting there &amp; around</h3><p>Shimla's own airport (Jubbarhatti, ~23km) has limited, weather-dependent flights, so most travellers fly into Chandigarh (~120km, 3.5–4hr by road) or take the narrow-gauge heritage toy train from Kalka (96km, ~6hrs). Mall Road and The Ridge are pedestrian-only and walkable; reaching Chaura Maidan, Knollswood, or Mashobra needs a taxi or short drive.</p></div>
+        <div><h3>Best time to visit</h3><p>Late October–December for crisp post-monsoon skies and autumn colour; January–March for winter charm, lower prices and thinner crowds (colder, occasional snow). Avoid June–August — monsoon season brings landslide risk on the approach roads.</p></div>
       </div>
     </div>
   </section>
@@ -1266,6 +1463,7 @@
     <div class="foot-links">
       <span>© 2026 Desi Nomad</span>
       <span>Hotel data supplied &amp; verified where noted</span>
+      <span><a href="mailto:queries@desi-nomad.com">queries@desi-nomad.com</a></span>
       <span>Ask Hazel for a custom itinerary →</span>
     </div>
   </div>
